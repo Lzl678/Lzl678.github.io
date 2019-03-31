@@ -1601,7 +1601,7 @@ pre .javascript .function {
 }
 .post-gallery {
   display: table;
-  table-layout: auto;
+  table-layout: fixed;
   width: 100%;
   border-collapse: separate;
 }
@@ -1879,7 +1879,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #faff33;
+  background: #fff;
 }
 .links-of-blogroll {
   font-size: 13px;
