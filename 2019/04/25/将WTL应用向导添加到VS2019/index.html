@@ -93,20 +93,34 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Lzl678">
-<meta property="og:url" content="https://lzl678.top/archives/2019/04/index.html">
+  <meta name="description" content="WTL 简介 WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对象技术对 Win32 接口进行了封装，使之便于开发 Windows 程序。相对于 MFC 这个庞然大物，WTL 保持了小而美，只包含了界面开发相关的特性。 下载 WTL 首先下载最新版本的 WTL，下载地址。下载后将其解压，包含文件如下：AppWizard：包含了应用向导相关的文件">
+<meta name="keywords" content="WTL">
+<meta property="og:type" content="article">
+<meta property="og:title" content="将WTL应用向导添加到VS2019">
+<meta property="og:url" content="https://lzl678.top/2019/04/25/将WTL应用向导添加到VS2019/index.html">
 <meta property="og:site_name" content="Lzl678">
+<meta property="og:description" content="WTL 简介 WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对象技术对 Win32 接口进行了封装，使之便于开发 Windows 程序。相对于 MFC 这个庞然大物，WTL 保持了小而美，只包含了界面开发相关的特性。 下载 WTL 首先下载最新版本的 WTL，下载地址。下载后将其解压，包含文件如下：AppWizard：包含了应用向导相关的文件">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-25/01-wtl.png">
+<meta property="og:image" content="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-25/02-setupModify.png">
+<meta property="og:image" content="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-25/02-regedit.png">
+<meta property="og:image" content="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-25/03-setup.png">
+<meta property="og:image" content="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-25/04-wtl-Wizard.png">
+<meta property="og:image" content="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-25/04-wtl-app.png">
+<meta property="og:image" content="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-25/06-wtl-include.png">
+<meta property="og:image" content="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-25/07-atlres.png">
+<meta property="og:updated_time" content="2019-04-25T15:03:41.836Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Lzl678">
+<meta name="twitter:title" content="将WTL应用向导添加到VS2019">
+<meta name="twitter:description" content="WTL 简介 WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对象技术对 Win32 接口进行了封装，使之便于开发 Windows 程序。相对于 MFC 这个庞然大物，WTL 保持了小而美，只包含了界面开发相关的特性。 下载 WTL 首先下载最新版本的 WTL，下载地址。下载后将其解压，包含文件如下：AppWizard：包含了应用向导相关的文件">
+<meta name="twitter:image" content="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-25/01-wtl.png">
 
 
 
 
 
 
-  <link rel="canonical" href="https://lzl678.top/archives/2019/04/">
+  <link rel="canonical" href="https://lzl678.top/2019/04/25/将WTL应用向导添加到VS2019/">
 
 
 
@@ -116,7 +130,7 @@
   };
 </script>
 
-  <title>归档 | Lzl678</title>
+  <title>将WTL应用向导添加到VS2019 | Lzl678</title>
   
 
 
@@ -163,7 +177,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -292,206 +306,275 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://lzl678.top/2019/04/25/将WTL应用向导添加到VS2019/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lzl678">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lzl678">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">将WTL应用向导添加到VS2019</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-25T23:00:10+08:00">2019-04-25</time>
+            
+
+            
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 8 篇日志。 继续努力。
-      </span>
-      
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/WTL/" itemprop="url" rel="index"><span itemprop="name">WTL</span></a></span>
 
-      
-
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
 
-        
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/04/25/将WTL应用向导添加到VS2019/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/25/将WTL应用向导添加到VS2019/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
 
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
+          
+             <span id="/2019/04/25/将WTL应用向导添加到VS2019/" class="leancloud_visitors" data-flag-title="将WTL应用向导添加到VS2019">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/04/25/将WTL应用向导添加到VS2019/" itemprop="url">
-              
-                <span itemprop="name">将WTL应用向导添加到VS2019</span>
-              
-            </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-04-25T23:00:10+08:00" content="2019-04-25">
-          04-25
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+          
 
+        </div>
+      </header>
+    
 
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/04/10/VS2019 更新MSDN并创建快捷方式/" itemprop="url">
-              
-                <span itemprop="name">VS2019 更新MSDN并创建快捷方式</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-04-10T21:44:55+08:00" content="2019-04-10">
-          04-10
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/04/03/VS2019 离线安装方法详解/" itemprop="url">
-              
-                <span itemprop="name">VS2019 离线安装方法详解</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-04-03T20:13:49+08:00" content="2019-04-03">
-          04-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/04/02/VS2019实用操作/" itemprop="url">
-              
-                <span itemprop="name">VS2019 实用操作</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-04-02T20:53:48+08:00" content="2019-04-02">
-          04-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <p><span id="pos_placeholder" style="width: 0px; height: 0px; visibility: hidden; margin: 0px; padding: 0px;"></span><div class="output_wrapper" id="output_wrapper_id" style="font-size: 17px; color: rgb(62, 62, 62); line-height: 1.6; word-spacing: 1px; letter-spacing: 1px; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;"><h3 id="hwtl" style="color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px; font-weight: bold; font-size: 1.3em; border-bottom: 2px solid rgb(0, 172, 193);"><span style="font-size: inherit; line-height: inherit; margin: 0px; display: inline-block; font-weight: normal; background: rgb(0, 172, 193); color: rgb(255, 255, 255); padding: 3px 10px 0px; border-top-right-radius: 3px; border-top-left-radius: 4px; margin-right: 2px;">WTL 简介</span></h3></div></p>
+<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对象技术对 Win32 接口进行了封装，使之便于开发 Windows 程序。相对于 MFC 这个庞然大物，WTL 保持了小而美，只包含了界面开发相关的特性。</p><p></p>
+<p></p><h3 id="hwtl-1" style="color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px; font-weight: bold; font-size: 1.3em; border-bottom: 2px solid rgb(0, 172, 193);"><span style="font-size: inherit; line-height: inherit; margin: 0px; display: inline-block; font-weight: normal; background: rgb(0, 172, 193); color: rgb(255, 255, 255); padding: 3px 10px 0px; border-top-right-radius: 3px; border-top-left-radius: 4px; margin-right: 2px;">下载 WTL</span></h3><p></p>
+<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">首先下载最新版本的 WTL，<a href="https://sourceforge.net/projects/wtl/files/WTL%2010/" style="font-size: inherit; line-height: inherit; margin: 0px; padding: 0px; text-decoration: none; color: rgb(30, 107, 184); overflow-wrap: break-word;" target="_blank" rel="noopener">下载地址</a>。下载后将其解压，包含文件如下：<br>AppWizard：包含了应用向导相关的文件，通过该文件夹里面的 Setup.js 进行安装；<br>Include：WTL 库实现文件；<br>Samples：提供了多个示例程序。</p><p></p>
+<p><figure style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;"><img src="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-25/01-wtl.png" alt="" title="" style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; display: block; margin: 0px auto; max-width: 100%;"><figcaption style="line-height: inherit; margin: 0px; padding: 0px; margin-top: 10px; text-align: center; color: rgb(153, 153, 153); font-size: 0.7em;"></figcaption></figure></p>
+<p></p><h3 id="hsetupjs" style="color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px; font-weight: bold; font-size: 1.3em; border-bottom: 2px solid rgb(0, 172, 193);"><span style="font-size: inherit; line-height: inherit; margin: 0px; display: inline-block; font-weight: normal; background: rgb(0, 172, 193); color: rgb(255, 255, 255); padding: 3px 10px 0px; border-top-right-radius: 3px; border-top-left-radius: 4px; margin-right: 2px;">修改 Setup.js</span></h3><p></p>
+<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">双击 AppWizard 目录下的 Setup.js，该文件会搜索电脑上安装的 VStudio，然后提示是否安装 WTL 应用向导，但是该文件目前暂不支持 VS2019，需要对其进行部分修改。从第 86 行开始修改，具体修改项如下所示：</p><p></p>
+<p><figure style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;"><img src="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-25/02-setupModify.png" alt="" title="" style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; display: block; margin: 0px auto; max-width: 100%;"><figcaption style="line-height: inherit; margin: 0px; padding: 0px; margin-top: 10px; text-align: center; color: rgb(153, 153, 153); font-size: 0.7em;"></figcaption></figure></p>
+<p></p><h3 id="h" style="color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px; font-weight: bold; font-size: 1.3em; border-bottom: 2px solid rgb(0, 172, 193);"><span style="font-size: inherit; line-height: inherit; margin: 0px; display: inline-block; font-weight: normal; background: rgb(0, 172, 193); color: rgb(255, 255, 255); padding: 3px 10px 0px; border-top-right-radius: 3px; border-top-left-radius: 4px; margin-right: 2px;">修改注册表</span></h3><p></p>
+<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">经过以上修改，再次双击 Setup.js 发现并没有搜到 VS2019。在修改 Setup.js 过程中引用了一个注册表项，打开注册表（使用快捷键 <strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">Win+R</strong> 弹出运行窗口，输入 <strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">regedit</strong>）发现并不存在这一项。参照下图进行添加：</p><p></p>
+<p><figure style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;"><img src="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-25/02-regedit.png" alt="" title="" style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; display: block; margin: 0px auto; max-width: 100%;"><figcaption style="line-height: inherit; margin: 0px; padding: 0px; margin-top: 10px; text-align: center; color: rgb(153, 153, 153); font-size: 0.7em;"></figcaption></figure></p>
+<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">再次双击 Setup.js 进行安装，在安装过程中如果出现下图点击<strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">是</strong>即可将 WTL 应用向导安装到 VS2019 中。</p><p></p>
+<p><figure style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;"><img src="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-25/03-setup.png" alt="" title="" style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; display: block; margin: 0px auto; max-width: 100%;"><figcaption style="line-height: inherit; margin: 0px; padding: 0px; margin-top: 10px; text-align: center; color: rgb(153, 153, 153); font-size: 0.7em;"></figcaption></figure></p>
+<p></p><h3 id="hwtl-2" style="color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px; font-weight: bold; font-size: 1.3em; border-bottom: 2px solid rgb(0, 172, 193);"><span style="font-size: inherit; line-height: inherit; margin: 0px; display: inline-block; font-weight: normal; background: rgb(0, 172, 193); color: rgb(255, 255, 255); padding: 3px 10px 0px; border-top-right-radius: 3px; border-top-left-radius: 4px; margin-right: 2px;">测试 WTL 应用向导</span></h3><p></p>
+<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">打开 VS2019 创建新项目，在搜索框中输入 <strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">WTL</strong>，如下图：</p><p></p>
+<p><figure style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;"><img src="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-25/04-wtl-Wizard.png" alt="" title="" style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; display: block; margin: 0px auto; max-width: 100%;"><figcaption style="line-height: inherit; margin: 0px; padding: 0px; margin-top: 10px; text-align: center; color: rgb(153, 153, 153); font-size: 0.7em;"></figcaption></figure></p>
+<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">然后根据向导添加项目名称、修改项目路径等，点击创建后弹出 WTL 应用向导。根据该向导进行修改，添加需要的特性或去除不需要的特性，修改完后点击 <strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">Finish</strong> 即可成功创建工程。</p><p></p>
+<p><figure style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;"><img src="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-25/04-wtl-app.png" alt="" title="" style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; display: block; margin: 0px auto; max-width: 100%;"><figcaption style="line-height: inherit; margin: 0px; padding: 0px; margin-top: 10px; text-align: center; color: rgb(153, 153, 153); font-size: 0.7em;"></figcaption></figure></p>
+<p></p><h3 id="h-1" style="color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px; font-weight: bold; font-size: 1.3em; border-bottom: 2px solid rgb(0, 172, 193);"><span style="font-size: inherit; line-height: inherit; margin: 0px; display: inline-block; font-weight: normal; background: rgb(0, 172, 193); color: rgb(255, 255, 255); padding: 3px 10px 0px; border-top-right-radius: 3px; border-top-left-radius: 4px; margin-right: 2px;">编译工程</span></h3><p></p>
+<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">在编译前，需要将 WTL 库（前面提到的 Include 目录）路径添加到 C++ 包含目录中，使工程能够引用到相关头文件。添加方式有多种，可以使用下图所示的方法：</p><p></p>
+<p><figure style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;"><img src="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-25/06-wtl-include.png" alt="" title="" style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; display: block; margin: 0px auto; max-width: 100%;"><figcaption style="line-height: inherit; margin: 0px; padding: 0px; margin-top: 10px; text-align: center; color: rgb(153, 153, 153); font-size: 0.7em;"></figcaption></figure></p>
+<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">生成的工程中使用了 WTL 中预定义的部分 ID，所以编译时会出现如下错误。</p><p></p>
+<p><figure style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;"><img src="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-25/07-atlres.png" alt="" title="" style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; display: block; margin: 0px auto; max-width: 100%;"><figcaption style="line-height: inherit; margin: 0px; padding: 0px; margin-top: 10px; text-align: center; color: rgb(153, 153, 153); font-size: 0.7em;"></figcaption></figure></p>
+<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">将 WTL 库中 Include 目录下的 atlres.h 拷贝到 WTLApp.rc 所在的目录，然后再次编译即可成功。</p><p></p>
+<p></p><p style="font-size: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px; color: #FFFFFF; background-color: #13acc1; text-align: center;"><strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">- - - End - - -</strong></p><p></p>
 
       
-
     </div>
+
+    
+
+    
+    
+    
+
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/images/wechat-qcode.jpg" alt="Lzl678 wechat" style="width: 200px; max-width: 100%;">
+    <div>欢迎扫码订阅我的微信公众号，以获得最佳阅读体验。</div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/WeChatpay.png" alt="Lzl678 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Lzl678</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://lzl678.top/2019/04/25/将WTL应用向导添加到VS2019/" title="将WTL应用向导添加到VS2019">https://lzl678.top/2019/04/25/将WTL应用向导添加到VS2019/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/WTL/" rel="tag"><i class="fa fa-tags"></i> WTL</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/04/10/VS2019 更新MSDN并创建快捷方式/" rel="next" title="VS2019 更新MSDN并创建快捷方式">
+                <i class="fa fa-chevron-left"></i> VS2019 更新MSDN并创建快捷方式
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -512,8 +595,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -608,6 +700,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#hwtl"><span class="nav-number">1.</span> <span class="nav-text">WTL 简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hwtl-1"><span class="nav-number">2.</span> <span class="nav-text">下载 WTL</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hsetupjs"><span class="nav-number">3.</span> <span class="nav-text">修改 Setup.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#h"><span class="nav-number">4.</span> <span class="nav-text">修改注册表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hwtl-2"><span class="nav-number">5.</span> <span class="nav-text">测试 WTL 应用向导</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#h-1"><span class="nav-number">6.</span> <span class="nav-text">编译工程</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -763,6 +871,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.6"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.0.6"></script>
+
+
 
   
 
@@ -1283,7 +1395,7 @@
   <script src="/lib/bookmark/bookmark.min.js?v=1.0"></script>
   <script type="text/javascript">
   
-    bookmark.loadBookmark();
+    bookmark.scrollToMark('auto', "#more");
   
   </script>
 
