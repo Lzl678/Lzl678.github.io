@@ -2,15 +2,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
   
 
 
@@ -32,6 +23,8 @@
 
 
 
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
 
 
 
@@ -44,13 +37,6 @@
 
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
-
-<link rel="stylesheet" href="/css/main.css?v=7.1.0">
-
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/lzl.png?v=7.1.0">
 
 
 
@@ -60,15 +46,32 @@
 
 
 
-<script id="hexo.configurations">
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=6.0.6" rel="stylesheet" type="text/css">
+
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/lzl.png?v=6.0.6">
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
     scheme: 'Gemini',
-    version: '7.1.0',
-    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
-    back2top: true,
-    back2top_sidebar: false,
+    version: '6.0.6',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
     fancybox: false,
     fastclick: false,
     lazyload: false,
@@ -102,13 +105,12 @@
 
 
 
-  
-  
+
   <link rel="canonical" href="http://lzl678.top/">
 
 
 
-<script id="page.configurations">
+<script type="text/javascript" id="page.configurations">
   CONFIG.page = {
     sidebar: "",
   };
@@ -125,31 +127,30 @@
 
 
 
-
-
-
   <noscript>
-  <style>
-  .use-motion .motion-element,
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-title { opacity: initial; }
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
 
-  .use-motion .logo,
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
 
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
   </style>
 </noscript>
 
@@ -167,8 +168,10 @@
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta">
+      <div class="header-inner"> 
+
+<div class="site-brand-wrapper">
+  <div class="site-meta ">
     
 
     <div class="custom-logo-site-title">
@@ -178,8 +181,9 @@
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-    
-    
+      
+        <p class="site-subtitle"></p>
+      
   </div>
 
   <div class="site-nav-toggle">
@@ -191,82 +195,49 @@
   </div>
 </div>
 
-
-
 <nav class="site-nav">
+  
+
   
     <ul id="menu" class="menu">
       
         
         
-        
           
-          <li class="menu-item menu-item-home menu-item-active">
+  <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+</li>
 
-    
-    
-    
       
-    
-
-    
-
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
-
-  </li>
-        
         
         
           
-          <li class="menu-item menu-item-archives">
+  <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+</li>
 
-    
-    
-    
       
-    
-
-    
-
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
-
-  </li>
-        
         
         
           
-          <li class="menu-item menu-item-categories">
+  <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+</li>
 
-    
-    
-    
       
-    
-
-    
-
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
-
-  </li>
-        
         
         
           
-          <li class="menu-item menu-item-tags">
-
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
-
-  </li>
+  <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+</li>
 
       
+
       
         <li class="menu-item menu-item-search">
           
@@ -306,12 +277,11 @@
 </nav>
 
 
-
   
 
 
 
-</div>
+ </div>
     </header>
 
     
@@ -362,20 +332,11 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                
-                <a href="/2019/04/26/2019-04-26_详解WTL应用向导/" class="post-title-link" itemprop="url">详解WTL应用向导</a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/2019/04/26/2019-04-26_详解WTL应用向导/" itemprop="url">详解WTL应用向导</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-
-            
-            
-            
-
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -383,12 +344,10 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-26T21:50:03+08:00">2019-04-26</time>
+            
 
-              
-                
-              
-
-              <time title="创建时间：2019-04-26 21:50:03" itemprop="dateCreated datePublished" datetime="2019-04-26T21:50:03+08:00">2019-04-26</time>
+            
             
 
             
@@ -416,15 +375,11 @@
 
           
             
-            
-              
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-            
-                <span class="post-meta-item-text">评论数：</span>
                 <a href="/2019/04/26/2019-04-26_详解WTL应用向导/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count valine-comment-count" data-xid="/2019/04/26/2019-04-26_详解WTL应用向导/" itemprop="commentCount"></span>
                 </a>
@@ -434,16 +389,16 @@
 
           
           
-            <span id="/2019/04/26/2019-04-26_详解WTL应用向导/" class="leancloud_visitors" data-flag-title="详解WTL应用向导">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              
-                <span class="post-meta-item-text">阅读次数：</span>
-              
-                <span class="leancloud-visitors-count"></span>
-            </span>
+             <span id="/2019/04/26/2019-04-26_详解WTL应用向导/" class="leancloud_visitors" data-flag-title="详解WTL应用向导">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
           
 
           
@@ -467,19 +422,15 @@
       
         
           
-            <p>
-              之前向 VS2019 中添加了 WTL 应用向导，今天来分析下该应用向导安装的相关文件，最终达到拷贝相关文件到 VS2019 的相应目录中即可直接使用 WTL 应用向导的目的。
+          之前向 VS2019 中添加了 WTL 应用向导，今天来分析下该应用向导安装的相关文件，最终达到拷贝相关文件到 VS2019 的相应目录中即可直接使用 WTL 应用向导的目的。
 在 VS2017 之前的版本中，应用向导安装的目录是 VStudio 安装目录下的 VC\vcprojects 目录，在 
-              ...
-            </p>
+          ...
           <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/04/26/2019-04-26_详解WTL应用向导/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/04/26/2019-04-26_详解WTL应用向导/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
           <!--/noindex-->
         
       
@@ -493,9 +444,6 @@
 
     
 
-    
-      
-    
     
 
     
@@ -554,20 +502,11 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                
-                <a href="/2019/04/25/2019-04-25_将WTL应用向导添加到VS2019/" class="post-title-link" itemprop="url">将WTL应用向导添加到VS2019</a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/2019/04/25/2019-04-25_将WTL应用向导添加到VS2019/" itemprop="url">将WTL应用向导添加到VS2019</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-
-            
-            
-            
-
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -575,12 +514,10 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-25T23:00:10+08:00">2019-04-25</time>
+            
 
-              
-                
-              
-
-              <time title="创建时间：2019-04-25 23:00:10" itemprop="dateCreated datePublished" datetime="2019-04-25T23:00:10+08:00">2019-04-25</time>
+            
             
 
             
@@ -608,15 +545,11 @@
 
           
             
-            
-              
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-            
-                <span class="post-meta-item-text">评论数：</span>
                 <a href="/2019/04/25/2019-04-25_将WTL应用向导添加到VS2019/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count valine-comment-count" data-xid="/2019/04/25/2019-04-25_将WTL应用向导添加到VS2019/" itemprop="commentCount"></span>
                 </a>
@@ -626,16 +559,16 @@
 
           
           
-            <span id="/2019/04/25/2019-04-25_将WTL应用向导添加到VS2019/" class="leancloud_visitors" data-flag-title="将WTL应用向导添加到VS2019">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              
-                <span class="post-meta-item-text">阅读次数：</span>
-              
-                <span class="leancloud-visitors-count"></span>
-            </span>
+             <span id="/2019/04/25/2019-04-25_将WTL应用向导添加到VS2019/" class="leancloud_visitors" data-flag-title="将WTL应用向导添加到VS2019">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
           
 
           
@@ -659,21 +592,17 @@
       
         
           
-            <p>
-              WTL 简介
+          WTL 简介
 WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对象技术对 Win32 接口进行了封装，使之便于开发 Windows 程序。相对于 MFC 这个庞然大物，WTL 保持了小而美，只包含了界面开发相关的特性。
 下载 WTL
 首先下载最新
-              ...
-            </p>
+          ...
           <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/04/25/2019-04-25_将WTL应用向导添加到VS2019/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/04/25/2019-04-25_将WTL应用向导添加到VS2019/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
           <!--/noindex-->
         
       
@@ -687,9 +616,6 @@ WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对�
 
     
 
-    
-      
-    
     
 
     
@@ -748,20 +674,11 @@ WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对�
         
           <h1 class="post-title" itemprop="name headline">
                 
-                
-                <a href="/2019/04/10/2019-04-10_VS2019 更新MSDN并创建快捷方式/" class="post-title-link" itemprop="url">VS2019 更新MSDN并创建快捷方式</a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/2019/04/10/2019-04-10_VS2019 更新MSDN并创建快捷方式/" itemprop="url">VS2019 更新MSDN并创建快捷方式</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-
-            
-            
-            
-
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -769,12 +686,10 @@ WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对�
               
                 <span class="post-meta-item-text">发表于</span>
               
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-10T21:44:55+08:00">2019-04-10</time>
+            
 
-              
-                
-              
-
-              <time title="创建时间：2019-04-10 21:44:55" itemprop="dateCreated datePublished" datetime="2019-04-10T21:44:55+08:00">2019-04-10</time>
+            
             
 
             
@@ -802,15 +717,11 @@ WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对�
 
           
             
-            
-              
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-            
-                <span class="post-meta-item-text">评论数：</span>
                 <a href="/2019/04/10/2019-04-10_VS2019 更新MSDN并创建快捷方式/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count valine-comment-count" data-xid="/2019/04/10/2019-04-10_VS2019 更新MSDN并创建快捷方式/" itemprop="commentCount"></span>
                 </a>
@@ -820,16 +731,16 @@ WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对�
 
           
           
-            <span id="/2019/04/10/2019-04-10_VS2019 更新MSDN并创建快捷方式/" class="leancloud_visitors" data-flag-title="VS2019 更新MSDN并创建快捷方式">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              
-                <span class="post-meta-item-text">阅读次数：</span>
-              
-                <span class="leancloud-visitors-count"></span>
-            </span>
+             <span id="/2019/04/10/2019-04-10_VS2019 更新MSDN并创建快捷方式/" class="leancloud_visitors" data-flag-title="VS2019 更新MSDN并创建快捷方式">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
           
 
           
@@ -853,20 +764,16 @@ WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对�
       
         
           
-            <p>
-              本文主要记录了 VS2019 中帮助查看器(Help Viewer)相关的内容，如何安装、如何启动、如何复用已有的文档、如何创建快捷方式等内容，通过本文将会对该工具有一个全面的了解。
+          本文主要记录了 VS2019 中帮助查看器(Help Viewer)相关的内容，如何安装、如何启动、如何复用已有的文档、如何创建快捷方式等内容，通过本文将会对该工具有一个全面的了解。
 安装 Help Viewer
 如果没有下图所示红色区域的两个子菜单项，说明没有安装 Help Viewer，需要重新
-              ...
-            </p>
+          ...
           <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/04/10/2019-04-10_VS2019 更新MSDN并创建快捷方式/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/04/10/2019-04-10_VS2019 更新MSDN并创建快捷方式/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
           <!--/noindex-->
         
       
@@ -880,9 +787,6 @@ WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对�
 
     
 
-    
-      
-    
     
 
     
@@ -941,20 +845,11 @@ WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对�
         
           <h1 class="post-title" itemprop="name headline">
                 
-                
-                <a href="/2019/04/03/2019-04-03_VS2019 离线安装方法详解/" class="post-title-link" itemprop="url">VS2019 离线安装方法详解</a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/2019/04/03/2019-04-03_VS2019 离线安装方法详解/" itemprop="url">VS2019 离线安装方法详解</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-
-            
-            
-            
-
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -962,12 +857,10 @@ WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对�
               
                 <span class="post-meta-item-text">发表于</span>
               
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-03T20:13:49+08:00">2019-04-03</time>
+            
 
-              
-                
-              
-
-              <time title="创建时间：2019-04-03 20:13:49" itemprop="dateCreated datePublished" datetime="2019-04-03T20:13:49+08:00">2019-04-03</time>
+            
             
 
             
@@ -995,15 +888,11 @@ WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对�
 
           
             
-            
-              
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-            
-                <span class="post-meta-item-text">评论数：</span>
                 <a href="/2019/04/03/2019-04-03_VS2019 离线安装方法详解/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count valine-comment-count" data-xid="/2019/04/03/2019-04-03_VS2019 离线安装方法详解/" itemprop="commentCount"></span>
                 </a>
@@ -1013,16 +902,16 @@ WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对�
 
           
           
-            <span id="/2019/04/03/2019-04-03_VS2019 离线安装方法详解/" class="leancloud_visitors" data-flag-title="VS2019 离线安装方法详解">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              
-                <span class="post-meta-item-text">阅读次数：</span>
-              
-                <span class="leancloud-visitors-count"></span>
-            </span>
+             <span id="/2019/04/03/2019-04-03_VS2019 离线安装方法详解/" class="leancloud_visitors" data-flag-title="VS2019 离线安装方法详解">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
           
 
           
@@ -1046,20 +935,16 @@ WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对�
       
         
           
-            <p>
-              本文详细介绍了 VS2019 离线安装的相关步骤，以桌面开发为主下载 C++桌面开发、.NET 桌面开发相关的工作负载、MFC 可选组件及帮助查看器。
+          本文详细介绍了 VS2019 离线安装的相关步骤，以桌面开发为主下载 C++桌面开发、.NET 桌面开发相关的工作负载、MFC 可选组件及帮助查看器。
 工作负载(Workload)
 离线安装需要先根据开发的项目类型下载相关的 工作负载(Workload)。工作负载包含多个依赖项，分为必需(Requi
-              ...
-            </p>
+          ...
           <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/04/03/2019-04-03_VS2019 离线安装方法详解/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/04/03/2019-04-03_VS2019 离线安装方法详解/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
           <!--/noindex-->
         
       
@@ -1073,9 +958,6 @@ WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对�
 
     
 
-    
-      
-    
     
 
     
@@ -1134,20 +1016,11 @@ WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对�
         
           <h1 class="post-title" itemprop="name headline">
                 
-                
-                <a href="/2019/04/02/2019-04-02_VS2019实用操作/" class="post-title-link" itemprop="url">VS2019 实用操作</a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/2019/04/02/2019-04-02_VS2019实用操作/" itemprop="url">VS2019 实用操作</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-
-            
-            
-            
-
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -1155,12 +1028,10 @@ WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对�
               
                 <span class="post-meta-item-text">发表于</span>
               
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-04-02T20:53:48+08:00">2019-04-02</time>
+            
 
-              
-                
-              
-
-              <time title="创建时间：2019-04-02 20:53:48" itemprop="dateCreated datePublished" datetime="2019-04-02T20:53:48+08:00">2019-04-02</time>
+            
             
 
             
@@ -1188,15 +1059,11 @@ WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对�
 
           
             
-            
-              
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-            
-                <span class="post-meta-item-text">评论数：</span>
                 <a href="/2019/04/02/2019-04-02_VS2019实用操作/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count valine-comment-count" data-xid="/2019/04/02/2019-04-02_VS2019实用操作/" itemprop="commentCount"></span>
                 </a>
@@ -1206,16 +1073,16 @@ WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对�
 
           
           
-            <span id="/2019/04/02/2019-04-02_VS2019实用操作/" class="leancloud_visitors" data-flag-title="VS2019 实用操作">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              
-                <span class="post-meta-item-text">阅读次数：</span>
-              
-                <span class="leancloud-visitors-count"></span>
-            </span>
+             <span id="/2019/04/02/2019-04-02_VS2019实用操作/" class="leancloud_visitors" data-flag-title="VS2019 实用操作">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
           
 
           
@@ -1239,21 +1106,17 @@ WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对�
       
         
           
-            <p>
-              本文列出了在编写程序过程中的几个非常实用的操作方式，通过这些操作方式，可以在一定程度上减少重复操作、提高编码效率、改善编程体验。
+          本文列出了在编写程序过程中的几个非常实用的操作方式，通过这些操作方式，可以在一定程度上减少重复操作、提高编码效率、改善编程体验。
 列模式操作
 列操作是一项很常用且实用的功能，可以一次性修改不同的行。
 在 VS2010 中已经存在该操作方式，下面表格列出 VStudio 及另外几个常用编辑器的操作方式
-              ...
-            </p>
+          ...
           <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/04/02/2019-04-02_VS2019实用操作/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/04/02/2019-04-02_VS2019实用操作/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
           <!--/noindex-->
         
       
@@ -1267,9 +1130,6 @@ WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对�
 
     
 
-    
-      
-    
     
 
     
@@ -1328,20 +1188,11 @@ WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对�
         
           <h1 class="post-title" itemprop="name headline">
                 
-                
-                <a href="/2019/03/29/2019-03-31_VS2019 实用设置/" class="post-title-link" itemprop="url">VS2019 实用设置</a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/2019/03/29/2019-03-31_VS2019 实用设置/" itemprop="url">VS2019 实用设置</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-
-            
-            
-            
-
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -1349,12 +1200,10 @@ WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对�
               
                 <span class="post-meta-item-text">发表于</span>
               
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-29T23:41:42+08:00">2019-03-29</time>
+            
 
-              
-                
-              
-
-              <time title="创建时间：2019-03-29 23:41:42" itemprop="dateCreated datePublished" datetime="2019-03-29T23:41:42+08:00">2019-03-29</time>
+            
             
 
             
@@ -1382,15 +1231,11 @@ WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对�
 
           
             
-            
-              
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-            
-                <span class="post-meta-item-text">评论数：</span>
                 <a href="/2019/03/29/2019-03-31_VS2019 实用设置/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count valine-comment-count" data-xid="/2019/03/29/2019-03-31_VS2019 实用设置/" itemprop="commentCount"></span>
                 </a>
@@ -1400,16 +1245,16 @@ WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对�
 
           
           
-            <span id="/2019/03/29/2019-03-31_VS2019 实用设置/" class="leancloud_visitors" data-flag-title="VS2019 实用设置">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              
-                <span class="post-meta-item-text">阅读次数：</span>
-              
-                <span class="leancloud-visitors-count"></span>
-            </span>
+             <span id="/2019/03/29/2019-03-31_VS2019 实用设置/" class="leancloud_visitors" data-flag-title="VS2019 实用设置">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
           
 
           
@@ -1433,21 +1278,17 @@ WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对�
       
         
           
-            <p>
-               
+           
 本文记录了 VS2019 预览版使用过程中的一些设置，这些设置也同样适用于 VS2017，我们可以根据个人的实际情况进行修改。
 滚动条(Scroll Bar)
 将滚动条设置为 map mode 后，则该区域会显示当前整个文件的缩略示图，能够以不同的颜色显示当前文件中的修改状态、错误、警告等信息，
-              ...
-            </p>
+          ...
           <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/03/29/2019-03-31_VS2019 实用设置/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/03/29/2019-03-31_VS2019 实用设置/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
           <!--/noindex-->
         
       
@@ -1461,9 +1302,6 @@ WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对�
 
     
 
-    
-      
-    
     
 
     
@@ -1522,20 +1360,11 @@ WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对�
         
           <h1 class="post-title" itemprop="name headline">
                 
-                
-                <a href="/2019/03/29/2019-03-29_VS2010主题设置及插件推荐/" class="post-title-link" itemprop="url">VS2010主题设置及插件推荐</a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/2019/03/29/2019-03-29_VS2010主题设置及插件推荐/" itemprop="url">VS2010主题设置及插件推荐</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-
-            
-            
-            
-
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -1543,12 +1372,10 @@ WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对�
               
                 <span class="post-meta-item-text">发表于</span>
               
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-29T21:21:24+08:00">2019-03-29</time>
+            
 
-              
-                
-              
-
-              <time title="创建时间：2019-03-29 21:21:24" itemprop="dateCreated datePublished" datetime="2019-03-29T21:21:24+08:00">2019-03-29</time>
+            
             
 
             
@@ -1576,15 +1403,11 @@ WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对�
 
           
             
-            
-              
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-            
-                <span class="post-meta-item-text">评论数：</span>
                 <a href="/2019/03/29/2019-03-29_VS2010主题设置及插件推荐/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count valine-comment-count" data-xid="/2019/03/29/2019-03-29_VS2010主题设置及插件推荐/" itemprop="commentCount"></span>
                 </a>
@@ -1594,16 +1417,16 @@ WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对�
 
           
           
-            <span id="/2019/03/29/2019-03-29_VS2010主题设置及插件推荐/" class="leancloud_visitors" data-flag-title="VS2010主题设置及插件推荐">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              
-                <span class="post-meta-item-text">阅读次数：</span>
-              
-                <span class="leancloud-visitors-count"></span>
-            </span>
+             <span id="/2019/03/29/2019-03-29_VS2010主题设置及插件推荐/" class="leancloud_visitors" data-flag-title="VS2010主题设置及插件推荐">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
           
 
           
@@ -1627,21 +1450,17 @@ WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对�
       
         
           
-            <p>
-              本文主要写了个人使用 VS2010 的一些配置及实用插件，从而打造一个符合个人风格的开发环境。
+          本文主要写了个人使用 VS2010 的一些配置及实用插件，从而打造一个符合个人风格的开发环境。
 基础设置
 安装 Visual Assist X
 在 VS2010 中若不安装 Visual Assist X 这个插件，直接开发 C++ 相关的项目将是非常痛苦的事情。默认环境没有对代码的不同部分进行颜色
-              ...
-            </p>
+          ...
           <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/03/29/2019-03-29_VS2010主题设置及插件推荐/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/03/29/2019-03-29_VS2010主题设置及插件推荐/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
           <!--/noindex-->
         
       
@@ -1655,9 +1474,6 @@ WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对�
 
     
 
-    
-      
-    
     
 
     
@@ -1716,20 +1532,11 @@ WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对�
         
           <h1 class="post-title" itemprop="name headline">
                 
-                
-                <a href="/2019/03/28/2019-03-28_放下VS2010，拥抱VS2019/" class="post-title-link" itemprop="url">放下VS2010，拥抱VS2019</a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/2019/03/28/2019-03-28_放下VS2010，拥抱VS2019/" itemprop="url">放下VS2010，拥抱VS2019</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-
-            
-            
-            
-
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -1737,12 +1544,10 @@ WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对�
               
                 <span class="post-meta-item-text">发表于</span>
               
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-28T22:47:02+08:00">2019-03-28</time>
+            
 
-              
-                
-              
-
-              <time title="创建时间：2019-03-28 22:47:02" itemprop="dateCreated datePublished" datetime="2019-03-28T22:47:02+08:00">2019-03-28</time>
+            
             
 
             
@@ -1770,15 +1575,11 @@ WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对�
 
           
             
-            
-              
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-            
-                <span class="post-meta-item-text">评论数：</span>
                 <a href="/2019/03/28/2019-03-28_放下VS2010，拥抱VS2019/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count valine-comment-count" data-xid="/2019/03/28/2019-03-28_放下VS2010，拥抱VS2019/" itemprop="commentCount"></span>
                 </a>
@@ -1788,16 +1589,16 @@ WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对�
 
           
           
-            <span id="/2019/03/28/2019-03-28_放下VS2010，拥抱VS2019/" class="leancloud_visitors" data-flag-title="放下VS2010，拥抱VS2019">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              
-                <span class="post-meta-item-text">阅读次数：</span>
-              
-                <span class="leancloud-visitors-count"></span>
-            </span>
+             <span id="/2019/03/28/2019-03-28_放下VS2010，拥抱VS2019/" class="leancloud_visitors" data-flag-title="放下VS2010，拥抱VS2019">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
           
 
           
@@ -1821,19 +1622,15 @@ WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对�
       
         
           
-            <p>
-              VS2019 再过几天就要正式发布了，我们还在使用 VS2010 进行软件开发。由于所处行业环境及项目类型，加之之前的代码积累，所以即使不用新的开发环境、新的语言技术也能比较好的完成工作。那究竟要不要使用新的开发环境、新的技术呢？答案当然是肯定的。
+          VS2019 再过几天就要正式发布了，我们还在使用 VS2010 进行软件开发。由于所处行业环境及项目类型，加之之前的代码积累，所以即使不用新的开发环境、新的语言技术也能比较好的完成工作。那究竟要不要使用新的开发环境、新的技术呢？答案当然是肯定的。
 过去几年一直使用 VS2010 进行开发，使用 M
-              ...
-            </p>
+          ...
           <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/03/28/2019-03-28_放下VS2010，拥抱VS2019/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/03/28/2019-03-28_放下VS2010，拥抱VS2019/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
           <!--/noindex-->
         
       
@@ -1847,9 +1644,6 @@ WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对�
 
     
 
-    
-      
-    
     
 
     
@@ -1908,20 +1702,11 @@ WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对�
         
           <h1 class="post-title" itemprop="name headline">
                 
-                
-                <a href="/2019/03/10/2019-03-10_hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-              
-            
-          </h1>
+                <a class="post-title-link" href="/2019/03/10/2019-03-10_hello-world/" itemprop="url">Hello World</a></h1>
         
 
         <div class="post-meta">
           <span class="post-time">
-
-            
-            
-            
-
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -1929,12 +1714,10 @@ WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对�
               
                 <span class="post-meta-item-text">发表于</span>
               
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-10T15:26:40+08:00">2019-03-10</time>
+            
 
-              
-                
-              
-
-              <time title="创建时间：2019-03-10 15:26:40" itemprop="dateCreated datePublished" datetime="2019-03-10T15:26:40+08:00">2019-03-10</time>
+            
             
 
             
@@ -1962,15 +1745,11 @@ WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对�
 
           
             
-            
-              
               <span class="post-comments-count">
                 <span class="post-meta-divider">|</span>
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-            
-                <span class="post-meta-item-text">评论数：</span>
                 <a href="/2019/03/10/2019-03-10_hello-world/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count valine-comment-count" data-xid="/2019/03/10/2019-03-10_hello-world/" itemprop="commentCount"></span>
                 </a>
@@ -1980,16 +1759,16 @@ WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对�
 
           
           
-            <span id="/2019/03/10/2019-03-10_hello-world/" class="leancloud_visitors" data-flag-title="Hello World">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              
-                <span class="post-meta-item-text">阅读次数：</span>
-              
-                <span class="leancloud-visitors-count"></span>
-            </span>
+             <span id="/2019/03/10/2019-03-10_hello-world/" class="leancloud_visitors" data-flag-title="Hello World">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
           
 
           
@@ -2014,13 +1793,11 @@ WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对�
         
           <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
           <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/03/10/2019-03-10_hello-world/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/03/10/2019-03-10_hello-world/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
           <!--/noindex-->
         
       
@@ -2034,9 +1811,6 @@ WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对�
 
     
 
-    
-      
-    
     
 
     
@@ -2082,18 +1856,19 @@ WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对�
   </div>
 
   <aside id="sidebar" class="sidebar">
+    
     <div class="sidebar-inner">
 
       
 
       
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
               <p class="site-author-name" itemprop="name">Lzl678</p>
-              <div class="site-description motion-element" itemprop="description"></div>
+              <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
           
@@ -2113,11 +1888,7 @@ WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对�
                 
                 
                 <div class="site-state-item site-state-categories">
-                  
-                    
-                      <a href="/categories/">
-                    
-                  
+                  <a href="/categories/index.html">
                     
                     
                       
@@ -2136,11 +1907,7 @@ WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对�
                 
                 
                 <div class="site-state-item site-state-tags">
-                  
-                    
-                      <a href="/tags/">
-                    
-                  
+                  <a href="/tags/index.html">
                     
                     
                       
@@ -2162,45 +1929,22 @@ WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对�
           
 
           
-
-          
             <div class="links-of-author motion-element">
               
                 <span class="links-of-author-item">
+                  <a href="https://github.com/Lzl678" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a>
                   
-                  
-                    
-                  
-                  
-                    
-                  
-                  <a href="https://github.com/Lzl678" title="GitHub &rarr; https://github.com/Lzl678" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
                 </span>
               
                 <span class="links-of-author-item">
+                  <a href="mailto:Lzl.l678@gmail.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
                   
-                  
-                    
-                  
-                  
-                    
-                  
-                  <a href="mailto:Lzl.l678@gmail.com" title="E-Mail &rarr; mailto:Lzl.l678@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
                 </span>
               
             </div>
           
 
           
-             <div class="cc-license motion-element" itemprop="license">
-              
-              
-                
-              
-              
-              
-              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
-             </div>
           
 
           
@@ -2212,15 +1956,21 @@ WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对�
           
 
         </div>
-      </div>
+      </section>
 
       
 
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
       
 
     </div>
   </aside>
-  
 
 
         
@@ -2230,7 +1980,7 @@ WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对�
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love" id="animate">
+  <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Lzl678</span>
@@ -2241,7 +1991,9 @@ WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对�
 </div>
 
 
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
 
 
@@ -2249,33 +2001,26 @@ WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对�
 
 
 
-  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a></div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Gemini</a></div>
 
 
 
 
         
-<div class="busuanzi-count">
+<div class="busuanzi-count">  
   <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
+
   
-    <span class="post-meta-item-icon">
-      <i class="fa fa-user"></i>
-    </span>
     <span class="site-uv" title="总访客量">
+      <i class="fa fa-user"></i>
       <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
     </span>
   
 
   
-    <span class="post-meta-divider">|</span>
-  
-
-  
-    <span class="post-meta-item-icon">
-      <i class="fa fa-eye"></i>
-    </span>
     <span class="site-pv" title="总访问量">
+      <i class="fa fa-eye"></i>
       <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
     </span>
   
@@ -2294,24 +2039,14 @@ WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对�
     </footer>
 
     
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-          <span id="scrollpercent"><span>0</span>%</span>
-        
-      </div>
-    
 
     
 
-    
-
-    
   </div>
 
   
 
-<script>
+<script type="text/javascript">
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
     window.Promise = null;
   }
@@ -2343,85 +2078,103 @@ WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对�
 
 
   
-  <script src="/lib/jquery/index.js?v=2.1.3"></script>
-
   
-  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
   
-  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-
-  
-
-
-  <script src="/js/utils.js?v=7.1.0"></script>
-
-  <script src="/js/motion.js?v=7.1.0"></script>
-
-
 
   
   
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
 
-
-  <script src="/js/affix.js?v=7.1.0"></script>
-
-  <script src="/js/schemes/pisces.js?v=7.1.0"></script>
-
-
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
 
 
   
 
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.0.6"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.0.6"></script>
+
+
+
+  
   
 
 
-  <script src="/js/next-boot.js?v=7.1.0"></script>
+  <script type="text/javascript" src="/js/src/affix.js?v=6.0.6"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.0.6"></script>
+
 
 
   
 
   
 
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.0.6"></script>
+
+
+
   
 
-  
-  
-
-<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
 
 
-
-<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-
-<script>
-  var GUEST = ['nick', 'mail', 'link'];
-  var guest = 'nick,mail,link';
-  guest = guest.split(',').filter(function(item) {
-    return GUEST.indexOf(item) > -1;
-  });
-  new Valine({
-    el: '#comments',
-    verify: false,
-    notify: false,
-    appId: 'D2PFAvQiQhCtXBRyOCrbp3PJ-gzGzoHsz',
-    appKey: 'DyYijInVk9S5VugkVM6JvhTJ',
-    placeholder: '添加评论...',
-    avatar: 'mm',
-    meta: guest,
-    pageSize: '10' || 10,
-    visitor: false,
-    lang: '' || 'zh-cn'
-  });
-</script>
+	
 
 
 
 
 
   
-  <script>
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'D2PFAvQiQhCtXBRyOCrbp3PJ-gzGzoHsz',
+        appKey: 'DyYijInVk9S5VugkVM6JvhTJ',
+        placeholder: '添加评论...',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
     // Popup Window;
     var isfetched = false;
     var isXml = true;
@@ -2507,7 +2260,7 @@ WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对�
                 var content = data.content.trim().replace(/<[^>]+>/g,"");
                 
                 var contentInLowerCase = content.toLowerCase();
-                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var articleUrl = decodeURIComponent(data.url);
                 var indexOfTitle = [];
                 var indexOfContent = [];
                 // only match articles with not empty titles
@@ -2676,9 +2429,9 @@ WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对�
               })
             };
             if (keywords.length === 1 && keywords[0] === "") {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
             } else if (resultItems.length === 0) {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
             } else {
               resultItems.sort(function (resultLeft, resultRight) {
                 if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
@@ -2746,19 +2499,23 @@ WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对�
 
 
   
-  
-  <script>
-    
-    function showTime(Counter) {
-      var entries = [];
-      var $visitors = $('.leancloud_visitors');
 
-      $visitors.each(function() {
-        entries.push( $(this).attr('id').trim() );
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("D2PFAvQiQhCtXBRyOCrbp3PJ-gzGzoHsz", "DyYijInVk9S5VugkVM6JvhTJ");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
       });
 
-      Counter('get', '/classes/Counter', { where: JSON.stringify({ url: { '$in': entries } }) })
-        .done(function({ results }) {
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
           var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
 
           if (results.length === 0) {
@@ -2768,48 +2525,88 @@ WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对�
 
           for (var i = 0; i < results.length; i++) {
             var item = results[i];
-            var url = item.url;
-            var time = item.time;
+            var url = item.get('url');
+            var time = item.get('time');
             var element = document.getElementById(url);
 
             $(element).find(COUNT_CONTAINER_REF).text(time);
           }
-          for (var i = 0; i < entries.length; i++) {
+          for(var i = 0; i < entries.length; i++) {
             var url = entries[i];
             var element = document.getElementById(url);
             var countSpan = $(element).find(COUNT_CONTAINER_REF);
-            if (countSpan.text() == '') {
+            if( countSpan.text() == '') {
               countSpan.text(0);
             }
           }
         })
-        .fail(function ({ responseJSON }) {
-          console.log('LeanCloud Counter Error: ' + responseJSON.code + ' ' + responseJSON.error);
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
         });
     }
-    
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            
+            counter.save(null, {
+              success: function(counter) {
+                
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(counter.get('time'));
+                
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            
+              var newcounter = new Counter();
+              /* Set ACL */
+              var acl = new AV.ACL();
+              acl.setPublicReadAccess(true);
+              acl.setPublicWriteAccess(true);
+              newcounter.setACL(acl);
+              /* End Set ACL */
+              newcounter.set("title", title);
+              newcounter.set("url", url);
+              newcounter.set("time", 1);
+              newcounter.save(null, {
+                success: function(newcounter) {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+                },
+                error: function(newcounter, error) {
+                  console.log('Failed to create');
+                }
+              });
+            
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
 
     $(function() {
-      $.get('https://app-router.leancloud.cn/2/route?appId=' + 'D2PFAvQiQhCtXBRyOCrbp3PJ-gzGzoHsz')
-        .done(function({ api_server }) {
-          var Counter = function(method, url, data) {
-            return $.ajax({
-              method: method,
-              url: 'https://' + api_server + '/1.1' + url,
-              headers: {
-                'X-LC-Id': 'D2PFAvQiQhCtXBRyOCrbp3PJ-gzGzoHsz',
-                'X-LC-Key': 'DyYijInVk9S5VugkVM6JvhTJ',
-                'Content-Type': 'application/json',
-              },
-              data: data
-            });
-          };
-          
-            if ($('.post-title-link').length >= 1) {
-              showTime(Counter);
-            }
-          
-        });
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
     });
   </script>
 
@@ -2822,7 +2619,6 @@ WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对�
   
 
   
-
   
 
   
@@ -2832,14 +2628,15 @@ WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对�
   
 
   
-
   
-
   
-
+  <script src="/lib/bookmark/bookmark.min.js?v=1.0"></script>
+  <script type="text/javascript">
   
-
+    bookmark.loadBookmark();
   
+  </script>
+
 
 </body>
 </html>
