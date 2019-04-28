@@ -90,27 +90,17 @@
 
 
 
-  <meta name="description" content="WTL 简介 WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对象技术对 Win32 接口进行了封装，使之便于开发 Windows 程序。相对于 MFC 这个庞然大物，WTL 保持了小而美，只包含了界面开发相关的特性。 下载 WTL 首先下载最新版本的 WTL，下载地址。下载后将其解压，包含文件如下：AppWizard：包含了应用向导相关的文件">
-<meta name="keywords" content="WTL">
+  <meta name="description" content="VS2019 再过几天就要正式发布了，我们还在使用 VS2010 进行软件开发。由于所处行业环境及项目类型，加之之前的代码积累，所以即使不用新的开发环境、新的语言技术也能比较好的完成工作。那究竟要不要使用新的开发环境、新的技术呢？答案当然是肯定的。 过去几年一直使用 VS2010 进行开发，使用 MFC 作为界面框架，使用 C++ 中的容器、算法，使用 C 线程处理多线程，使用 Win32 中的临">
 <meta property="og:type" content="article">
-<meta property="og:title" content="将WTL应用向导添加到VS2019">
-<meta property="og:url" content="http://lzl678.top/2019/04/25/2019-04-25_将WTL应用向导添加到VS2019/index.html">
+<meta property="og:title" content="放下VS2010，拥抱VS2019">
+<meta property="og:url" content="http://lzl678.top/2019-03-28_放下VS2010，拥抱VS2019/index.html">
 <meta property="og:site_name" content="Lzl678">
-<meta property="og:description" content="WTL 简介 WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对象技术对 Win32 接口进行了封装，使之便于开发 Windows 程序。相对于 MFC 这个庞然大物，WTL 保持了小而美，只包含了界面开发相关的特性。 下载 WTL 首先下载最新版本的 WTL，下载地址。下载后将其解压，包含文件如下：AppWizard：包含了应用向导相关的文件">
+<meta property="og:description" content="VS2019 再过几天就要正式发布了，我们还在使用 VS2010 进行软件开发。由于所处行业环境及项目类型，加之之前的代码积累，所以即使不用新的开发环境、新的语言技术也能比较好的完成工作。那究竟要不要使用新的开发环境、新的技术呢？答案当然是肯定的。 过去几年一直使用 VS2010 进行开发，使用 MFC 作为界面框架，使用 C++ 中的容器、算法，使用 C 线程处理多线程，使用 Win32 中的临">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-25/01-wtl.png">
-<meta property="og:image" content="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-25/02-setupModify.png">
-<meta property="og:image" content="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-25/02-regedit.png">
-<meta property="og:image" content="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-25/03-setup.png">
-<meta property="og:image" content="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-25/04-wtl-Wizard.png">
-<meta property="og:image" content="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-25/04-wtl-app.png">
-<meta property="og:image" content="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-25/06-wtl-include.png">
-<meta property="og:image" content="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-25/07-atlres.png">
-<meta property="og:updated_time" content="2019-04-28T05:39:22.665Z">
+<meta property="og:updated_time" content="2019-04-28T05:36:24.105Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="将WTL应用向导添加到VS2019">
-<meta name="twitter:description" content="WTL 简介 WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对象技术对 Win32 接口进行了封装，使之便于开发 Windows 程序。相对于 MFC 这个庞然大物，WTL 保持了小而美，只包含了界面开发相关的特性。 下载 WTL 首先下载最新版本的 WTL，下载地址。下载后将其解压，包含文件如下：AppWizard：包含了应用向导相关的文件">
-<meta name="twitter:image" content="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-25/01-wtl.png">
+<meta name="twitter:title" content="放下VS2010，拥抱VS2019">
+<meta name="twitter:description" content="VS2019 再过几天就要正式发布了，我们还在使用 VS2010 进行软件开发。由于所处行业环境及项目类型，加之之前的代码积累，所以即使不用新的开发环境、新的语言技术也能比较好的完成工作。那究竟要不要使用新的开发环境、新的技术呢？答案当然是肯定的。 过去几年一直使用 VS2010 进行开发，使用 MFC 作为界面框架，使用 C++ 中的容器、算法，使用 C 线程处理多线程，使用 Win32 中的临">
 
 
 
@@ -118,7 +108,7 @@
 
   
   
-  <link rel="canonical" href="http://lzl678.top/2019/04/25/2019-04-25_将WTL应用向导添加到VS2019/">
+  <link rel="canonical" href="http://lzl678.top/2019-03-28_放下VS2010，拥抱VS2019/">
 
 
 
@@ -128,7 +118,7 @@
   };
 </script>
 
-  <title>将WTL应用向导添加到VS2019 | Lzl678</title>
+  <title>放下VS2010，拥抱VS2019 | Lzl678</title>
   
 
 
@@ -356,7 +346,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lzl678.top/2019/04/25/2019-04-25_将WTL应用向导添加到VS2019/">
+    <link itemprop="mainEntityOfPage" href="http://lzl678.top/2019-03-28_放下VS2010，拥抱VS2019/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Lzl678">
@@ -373,7 +363,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">将WTL应用向导添加到VS2019
+          <h1 class="post-title" itemprop="name headline">放下VS2010，拥抱VS2019
 
               
             
@@ -399,7 +389,7 @@
                 
               
 
-              <time title="创建时间：2019-04-25 23:00:10" itemprop="dateCreated datePublished" datetime="2019-04-25T23:00:10+08:00">2019-04-25</time>
+              <time title="创建时间：2019-03-28 22:47:02" itemprop="dateCreated datePublished" datetime="2019-03-28T22:47:02+08:00">2019-03-28</time>
             
 
             
@@ -417,7 +407,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/WTL/" itemprop="url" rel="index"><span itemprop="name">WTL</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/VStudio/" itemprop="url" rel="index"><span itemprop="name">VStudio</span></a></span>
 
                 
                 
@@ -436,8 +426,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/2019/04/25/2019-04-25_将WTL应用向导添加到VS2019/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/25/2019-04-25_将WTL应用向导添加到VS2019/" itemprop="commentCount"></span>
+                <a href="/2019-03-28_放下VS2010，拥抱VS2019/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019-03-28_放下VS2010，拥抱VS2019/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -445,7 +435,7 @@
 
           
           
-            <span id="/2019/04/25/2019-04-25_将WTL应用向导添加到VS2019/" class="leancloud_visitors" data-flag-title="将WTL应用向导添加到VS2019">
+            <span id="/2019-03-28_放下VS2010，拥抱VS2019/" class="leancloud_visitors" data-flag-title="放下VS2010，拥抱VS2019">
               <span class="post-meta-divider">|</span>
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
@@ -476,31 +466,23 @@
       
 
       
-        <p><span id="pos_placeholder" style="width: 0px; height: 0px; visibility: hidden; margin: 0px; padding: 0px;"></span><div class="output_wrapper" id="output_wrapper_id" style="font-size: 17px; color: rgb(62, 62, 62); line-height: 1.6; word-spacing: 1px; letter-spacing: 1px; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;"><h3 id="hwtl" style="color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px; font-weight: bold; font-size: 1.3em; border-bottom: 2px solid rgb(0, 172, 193);"><span style="font-size: inherit; line-height: inherit; margin: 0px; display: inline-block; font-weight: normal; background: rgb(0, 172, 193); color: rgb(255, 255, 255); padding: 3px 10px 0px; border-top-right-radius: 3px; border-top-left-radius: 4px; margin-right: 2px;">WTL 简介</span></h3></div></p>
-<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">WTL 全称是 Windows Template Library，像 MFC 一样使用 C++ 的面向对象技术对 Win32 接口进行了封装，使之便于开发 Windows 程序。相对于 MFC 这个庞然大物，WTL 保持了小而美，只包含了界面开发相关的特性。</p><p></p>
-<p></p><h3 id="hwtl-1" style="color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px; font-weight: bold; font-size: 1.3em; border-bottom: 2px solid rgb(0, 172, 193);"><span style="font-size: inherit; line-height: inherit; margin: 0px; display: inline-block; font-weight: normal; background: rgb(0, 172, 193); color: rgb(255, 255, 255); padding: 3px 10px 0px; border-top-right-radius: 3px; border-top-left-radius: 4px; margin-right: 2px;">下载 WTL</span></h3><p></p>
-<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">首先下载最新版本的 WTL，<a href="https://sourceforge.net/projects/wtl/files/WTL%2010/" style="font-size: inherit; line-height: inherit; margin: 0px; padding: 0px; text-decoration: none; color: rgb(30, 107, 184); overflow-wrap: break-word;" target="_blank" rel="noopener">下载地址</a>。下载后将其解压，包含文件如下：<br>AppWizard：包含了应用向导相关的文件，通过该文件夹里面的 Setup.js 进行安装；<br>Include：WTL 库实现文件；<br>Samples：提供了多个示例程序。</p><p></p>
-<p><figure style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;"><img src="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-25/01-wtl.png" alt="" title="" style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; display: block; margin: 0px auto; max-width: 100%;"><figcaption style="line-height: inherit; margin: 0px; padding: 0px; margin-top: 10px; text-align: center; color: rgb(153, 153, 153); font-size: 0.7em;"></figcaption></figure></p>
-<p></p><h3 id="hsetupjs" style="color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px; font-weight: bold; font-size: 1.3em; border-bottom: 2px solid rgb(0, 172, 193);"><span style="font-size: inherit; line-height: inherit; margin: 0px; display: inline-block; font-weight: normal; background: rgb(0, 172, 193); color: rgb(255, 255, 255); padding: 3px 10px 0px; border-top-right-radius: 3px; border-top-left-radius: 4px; margin-right: 2px;">修改 Setup.js</span></h3><p></p>
-<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">双击 AppWizard 目录下的 Setup.js，该文件会搜索电脑上安装的 VStudio，然后提示是否安装 WTL 应用向导，但是该文件目前暂不支持 VS2019，需要对其进行部分修改。从第 86 行开始修改，具体修改项如下所示：</p><p></p>
-<p><figure style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;"><img src="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-25/02-setupModify.png" alt="" title="" style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; display: block; margin: 0px auto; max-width: 100%;"><figcaption style="line-height: inherit; margin: 0px; padding: 0px; margin-top: 10px; text-align: center; color: rgb(153, 153, 153); font-size: 0.7em;"></figcaption></figure></p>
-<p></p><h3 id="h" style="color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px; font-weight: bold; font-size: 1.3em; border-bottom: 2px solid rgb(0, 172, 193);"><span style="font-size: inherit; line-height: inherit; margin: 0px; display: inline-block; font-weight: normal; background: rgb(0, 172, 193); color: rgb(255, 255, 255); padding: 3px 10px 0px; border-top-right-radius: 3px; border-top-left-radius: 4px; margin-right: 2px;">修改注册表</span></h3><p></p>
-<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">经过以上修改，再次双击 Setup.js 发现并没有搜到 VS2019。在修改 Setup.js 过程中引用了一个注册表项，打开注册表（使用快捷键 <strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">Win+R</strong> 弹出运行窗口，输入 <strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">regedit</strong>）发现并不存在这一项。参照下图进行添加：</p><p></p>
-<p><figure style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;"><img src="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-25/02-regedit.png" alt="" title="" style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; display: block; margin: 0px auto; max-width: 100%;"><figcaption style="line-height: inherit; margin: 0px; padding: 0px; margin-top: 10px; text-align: center; color: rgb(153, 153, 153); font-size: 0.7em;"></figcaption></figure></p>
-<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">再次双击 Setup.js 进行安装，在安装过程中如果出现下图点击<strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">是</strong>即可将 WTL 应用向导安装到 VS2019 中。</p><p></p>
-<p><figure style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;"><img src="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-25/03-setup.png" alt="" title="" style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; display: block; margin: 0px auto; max-width: 100%;"><figcaption style="line-height: inherit; margin: 0px; padding: 0px; margin-top: 10px; text-align: center; color: rgb(153, 153, 153); font-size: 0.7em;"></figcaption></figure></p>
-<p></p><h3 id="hwtl-2" style="color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px; font-weight: bold; font-size: 1.3em; border-bottom: 2px solid rgb(0, 172, 193);"><span style="font-size: inherit; line-height: inherit; margin: 0px; display: inline-block; font-weight: normal; background: rgb(0, 172, 193); color: rgb(255, 255, 255); padding: 3px 10px 0px; border-top-right-radius: 3px; border-top-left-radius: 4px; margin-right: 2px;">测试 WTL 应用向导</span></h3><p></p>
-<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">打开 VS2019 创建新项目，在搜索框中输入 <strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">WTL</strong>，如下图：</p><p></p>
-<p><figure style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;"><img src="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-25/04-wtl-Wizard.png" alt="" title="" style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; display: block; margin: 0px auto; max-width: 100%;"><figcaption style="line-height: inherit; margin: 0px; padding: 0px; margin-top: 10px; text-align: center; color: rgb(153, 153, 153); font-size: 0.7em;"></figcaption></figure></p>
-<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">然后根据向导添加项目名称、修改项目路径等，点击创建后弹出 WTL 应用向导。根据该向导进行修改，添加需要的特性或去除不需要的特性，修改完后点击 <strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">Finish</strong> 即可成功创建工程。</p><p></p>
-<p><figure style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;"><img src="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-25/04-wtl-app.png" alt="" title="" style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; display: block; margin: 0px auto; max-width: 100%;"><figcaption style="line-height: inherit; margin: 0px; padding: 0px; margin-top: 10px; text-align: center; color: rgb(153, 153, 153); font-size: 0.7em;"></figcaption></figure></p>
-<p></p><h3 id="h-1" style="color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px; font-weight: bold; font-size: 1.3em; border-bottom: 2px solid rgb(0, 172, 193);"><span style="font-size: inherit; line-height: inherit; margin: 0px; display: inline-block; font-weight: normal; background: rgb(0, 172, 193); color: rgb(255, 255, 255); padding: 3px 10px 0px; border-top-right-radius: 3px; border-top-left-radius: 4px; margin-right: 2px;">编译工程</span></h3><p></p>
-<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">在编译前，需要将 WTL 库（前面提到的 Include 目录）路径添加到 C++ 包含目录中，使工程能够引用到相关头文件。添加方式有多种，可以使用下图所示的方法：</p><p></p>
-<p><figure style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;"><img src="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-25/06-wtl-include.png" alt="" title="" style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; display: block; margin: 0px auto; max-width: 100%;"><figcaption style="line-height: inherit; margin: 0px; padding: 0px; margin-top: 10px; text-align: center; color: rgb(153, 153, 153); font-size: 0.7em;"></figcaption></figure></p>
-<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">生成的工程中使用了 WTL 中预定义的部分 ID，所以编译时会出现如下错误。</p><p></p>
-<p><figure style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;"><img src="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-25/07-atlres.png" alt="" title="" style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; display: block; margin: 0px auto; max-width: 100%;"><figcaption style="line-height: inherit; margin: 0px; padding: 0px; margin-top: 10px; text-align: center; color: rgb(153, 153, 153); font-size: 0.7em;"></figcaption></figure></p>
-<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">将 WTL 库中 Include 目录下的 atlres.h 拷贝到 WTLApp.rc 所在的目录，然后再次编译即可成功。</p><p></p>
-<p></p><p style="font-size: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px; color: #FFFFFF; background-color: #13acc1; text-align: center;"><strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">- - - End - - -</strong></p><p></p>
+        <p><span id="pos_placeholder" style="width: 0px; height: 0px; visibility: hidden; margin: 0px; padding: 0px;"></span><div class="output_wrapper" id="output_wrapper_id" style="font-size: 17px; color: rgb(62, 62, 62); line-height: 1.6; word-spacing: 1px; letter-spacing: 1px; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;"><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">VS2019 再过几天就要正式发布了，我们还在使用 VS2010 进行软件开发。由于所处行业环境及项目类型，加之之前的代码积累，所以即使不用新的开发环境、新的语言技术也能比较好的完成工作。那究竟要不要使用新的开发环境、新的技术呢？答案当然是肯定的。</p></div></p>
+<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">过去几年一直使用 VS2010 进行开发，使用 MFC 作为界面框架，使用 C++ 中的容器、算法，使用 C 线程处理多线程，使用 Win32 中的临界区、Event、Mutex 等处理线程间通信，使用 boost 中的部分组件(如 bind、function、signals2 等)等。多年过去，是时候做些改变了。</p><p></p>
+<p></p><h3 id="hc11" style="color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px; font-weight: bold; font-size: 1.3em; border-bottom: 2px solid rgb(0, 172, 193);"><span style="font-size: inherit; line-height: inherit; margin: 0px; display: inline-block; font-weight: normal; background: rgb(0, 172, 193); color: rgb(255, 255, 255); padding: 3px 10px 0px; border-top-right-radius: 3px; border-top-left-radius: 4px; margin-right: 2px;">学习 C++11</span></h3><p></p>
+<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;"><em style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-style: italic;">C++11</em> 已经推出多年，现在每三年一个标准，<em style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-style: italic;">C++14</em>、<em style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-style: italic;">C++17</em> 已制定完毕，<em style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-style: italic;">C++20</em> 也在路上。一味追随新技术只会让自己陷入疲惫和迷茫，但对于比较成熟的技术还是要不断学习、尝试使用，同时保持对新技术的关注。</p><p></p>
+<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">VS2010 已经提供了部分 <em style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-style: italic;">C++11</em> 的功能，如 auto、nullprt、std::shared_ptr、std::unique_ptr、部分 lambda 等功能，但其它如 foreach、容器初始化、多线程库、原子库、正则表达式库等大部分功能并没有包含。虽然这些可以使用 boost 中提供的相关库(<em style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-style: italic;">C++11</em> 中的很多功能源自 boost)，但新的开发环境显然提供了更完善的支持，从编写、编译、运行调试等各方面都能够提升编码体验。</p><p></p>
+<p></p><h3 id="hmfc" style="color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px; font-weight: bold; font-size: 1.3em; border-bottom: 2px solid rgb(0, 172, 193);"><span style="font-size: inherit; line-height: inherit; margin: 0px; display: inline-block; font-weight: normal; background: rgb(0, 172, 193); color: rgb(255, 255, 255); padding: 3px 10px 0px; border-top-right-radius: 3px; border-top-left-radius: 4px; margin-right: 2px;">放弃 MFC</span></h3><p></p>
+<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">MFC 是微软提供的 Windows 桌面开发框架，主要使用面向对象思想对 Win32 API 进行了封装以便能够快速开发桌面程序。从 92 年发布距今已经 27 年，还在使用的人想必不会太多，愿意花时间学习的就更少了。</p><p></p>
+<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">MFC 问世时，<em style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-style: italic;">C++</em> 的标准(C++98)还在制定中，模板及模板元编程也还没出现。随着 VC6 的成功 MFC 也火了一段时间，在 VS2010 中也加入了大量的新组件(相关类以 CMFC 开头，其实是集成了 BCG 库)，在此之后再也没有大的改进。</p><p></p>
+<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">在安装 VS2010 时，MFC 还是默认安装的，在安装 VS2015 时，MFC 需要手动选择才会安装，之后的版本(VS2017、VS2019 预览版)也是如此。</p><p></p>
+<p></p><h3 id="hnetcore" style="color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px; font-weight: bold; font-size: 1.3em; border-bottom: 2px solid rgb(0, 172, 193);"><span style="font-size: inherit; line-height: inherit; margin: 0px; display: inline-block; font-weight: normal; background: rgb(0, 172, 193); color: rgb(255, 255, 255); padding: 3px 10px 0px; border-top-right-radius: 3px; border-top-left-radius: 4px; margin-right: 2px;">试用 .Net Core</span></h3><p></p>
+<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">过去微软主推 .Net 技术，现在主推 .Net Core 技术，.Net 的桌面开发技术 WinForm、WPF 也已移植到 .Net Core 中。利用 .Net 庞大的基础类库，使用 C# 的诸多语法特性，借助 VStudio 的智能支持，使用 WinForm 能够更加快速的开发桌面程序，而且更易维护。</p><p></p>
+<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">所以是时候放弃 MFC，转而使用新的开发框架了。</p><p></p>
+<p></p><h3 id="hvs2019" style="color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px; font-weight: bold; font-size: 1.3em; border-bottom: 2px solid rgb(0, 172, 193);"><span style="font-size: inherit; line-height: inherit; margin: 0px; display: inline-block; font-weight: normal; background: rgb(0, 172, 193); color: rgb(255, 255, 255); padding: 3px 10px 0px; border-top-right-radius: 3px; border-top-left-radius: 4px; margin-right: 2px;">使用 VS2019</span></h3><p></p>
+<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">.Net Core 作为微软新一代技术平台，已经发展多年，完全开源、跨平台(WinForm、WPF 只支持 Windows 平台)。使用跨平台软件 VS Code 可以直接在各平台上进行开发并能获得一直的开发体验，只是若要使用 .Net Core + WinForm 进行桌面软件开发，还是使用 VStudio 更加便利，而这些在 VS2019 中才有更好的支持。</p><p></p>
+<p></p><h3 id="h" style="color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px; font-weight: bold; font-size: 1.3em; border-bottom: 2px solid rgb(0, 172, 193);"><span style="font-size: inherit; line-height: inherit; margin: 0px; display: inline-block; font-weight: normal; background: rgb(0, 172, 193); color: rgb(255, 255, 255); padding: 3px 10px 0px; border-top-right-radius: 3px; border-top-left-radius: 4px; margin-right: 2px;">小结</span></h3><p></p>
+<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">在使用 VS2010 时，她是最新的开发环境、<em style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-style: italic;">C++11</em> 标准还没被各大厂商支持、微软还不是现在的微软(以前闭源，现在开源)、.Net Core 还没问世，我们使用的也是当时的新技术。随着时间的推移，各项技术(开发工具、语言)都又有了进一步的发展，我们也需要重新选择。只有不断的学习才能不断的进步。</p><p></p>
+<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px; background-color: #8bc34a; text-align: center;"><strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">- - - End - - -</strong></p><p></p>
 
       
     </div>
@@ -565,7 +547,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="http://lzl678.top/2019/04/25/2019-04-25_将WTL应用向导添加到VS2019/" title="将WTL应用向导添加到VS2019">http://lzl678.top/2019/04/25/2019-04-25_将WTL应用向导添加到VS2019/</a>
+    <a href="http://lzl678.top/2019-03-28_放下VS2010，拥抱VS2019/" title="放下VS2010，拥抱VS2019">http://lzl678.top/2019-03-28_放下VS2010，拥抱VS2019/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -576,12 +558,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/WTL/" rel="tag"># WTL</a>
-          
-        </div>
-      
 
       
       
@@ -591,8 +567,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/04/10/2019-04-10_VS2019 更新MSDN并创建快捷方式/" rel="next" title="VS2019 更新MSDN并创建快捷方式">
-                <i class="fa fa-chevron-left"></i> VS2019 更新MSDN并创建快捷方式
+              <a href="/2019-03-10_hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
               </a>
             
           </div>
@@ -601,8 +577,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/04/26/2019-04-26_详解WTL应用向导/" rel="prev" title="详解WTL应用向导">
-                详解WTL应用向导 <i class="fa fa-chevron-right"></i>
+              <a href="/2019-03-29_VS2010主题设置及插件推荐/" rel="prev" title="VS2010主题设置及插件推荐">
+                VS2010主题设置及插件推荐 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -798,7 +774,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#hwtl"><span class="nav-number">1.</span> <span class="nav-text">WTL 简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hwtl-1"><span class="nav-number">2.</span> <span class="nav-text">下载 WTL</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hsetupjs"><span class="nav-number">3.</span> <span class="nav-text">修改 Setup.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#h"><span class="nav-number">4.</span> <span class="nav-text">修改注册表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hwtl-2"><span class="nav-number">5.</span> <span class="nav-text">测试 WTL 应用向导</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#h-1"><span class="nav-number">6.</span> <span class="nav-text">编译工程</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#hc11"><span class="nav-number">1.</span> <span class="nav-text">学习 C++11</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hmfc"><span class="nav-number">2.</span> <span class="nav-text">放弃 MFC</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hnetcore"><span class="nav-number">3.</span> <span class="nav-text">试用 .Net Core</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hvs2019"><span class="nav-number">4.</span> <span class="nav-text">使用 VS2019</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#h"><span class="nav-number">5.</span> <span class="nav-text">小结</span></a></li></ol></div>
             
 
           </div>

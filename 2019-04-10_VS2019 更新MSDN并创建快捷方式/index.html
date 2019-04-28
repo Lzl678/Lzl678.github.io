@@ -90,23 +90,26 @@
 
 
 
-  <meta name="description" content="本文列出了在编写程序过程中的几个非常实用的操作方式，通过这些操作方式，可以在一定程度上减少重复操作、提高编码效率、改善编程体验。 列模式操作 列操作是一项很常用且实用的功能，可以一次性修改不同的行。 在 VS2010 中已经存在该操作方式，下面表格列出 VStudio 及另外几个常用编辑器的操作方式。    编辑环境 操作方式   VStudio 按着 Alt 键，同时使用鼠标左键进行列操作  V">
+  <meta name="description" content="本文主要记录了 VS2019 中帮助查看器(Help Viewer)相关的内容，如何安装、如何启动、如何复用已有的文档、如何创建快捷方式等内容，通过本文将会对该工具有一个全面的了解。 安装 Help Viewer 如果没有下图所示红色区域的两个子菜单项，说明没有安装 Help Viewer，需要重新启动安装程序进行修改。  在 VS2019 中，通过点击菜单项 Tools-&amp;gt;Get Tool">
 <meta name="keywords" content="VS2019">
 <meta property="og:type" content="article">
-<meta property="og:title" content="VS2019 实用操作">
-<meta property="og:url" content="http://lzl678.top/2019/04/02/2019-04-02_VS2019实用操作/index.html">
+<meta property="og:title" content="VS2019 更新MSDN并创建快捷方式">
+<meta property="og:url" content="http://lzl678.top/2019-04-10_VS2019 更新MSDN并创建快捷方式/index.html">
 <meta property="og:site_name" content="Lzl678">
-<meta property="og:description" content="本文列出了在编写程序过程中的几个非常实用的操作方式，通过这些操作方式，可以在一定程度上减少重复操作、提高编码效率、改善编程体验。 列模式操作 列操作是一项很常用且实用的功能，可以一次性修改不同的行。 在 VS2010 中已经存在该操作方式，下面表格列出 VStudio 及另外几个常用编辑器的操作方式。    编辑环境 操作方式   VStudio 按着 Alt 键，同时使用鼠标左键进行列操作  V">
+<meta property="og:description" content="本文主要记录了 VS2019 中帮助查看器(Help Viewer)相关的内容，如何安装、如何启动、如何复用已有的文档、如何创建快捷方式等内容，通过本文将会对该工具有一个全面的了解。 安装 Help Viewer 如果没有下图所示红色区域的两个子菜单项，说明没有安装 Help Viewer，需要重新启动安装程序进行修改。  在 VS2019 中，通过点击菜单项 Tools-&amp;gt;Get Tool">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-02/Code-Snippets.png">
-<meta property="og:image" content="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-02/GoTo.png">
-<meta property="og:image" content="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-02/Keyboard.png">
-<meta property="og:image" content="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-02/Word-Wrap.png">
-<meta property="og:updated_time" content="2019-04-28T05:38:24.881Z">
+<meta property="og:image" content="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-10/HelpMenu.png">
+<meta property="og:image" content="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-10/HelpViewer.png">
+<meta property="og:image" content="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-10/HelpViewer-Set.png">
+<meta property="og:image" content="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-10/HelpViewer-Doc.png">
+<meta property="og:image" content="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-10/HelpViewer-param.png">
+<meta property="og:image" content="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-10/HelpViewer-help.png">
+<meta property="og:image" content="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-10/HelpViewer-shortcut.png">
+<meta property="og:updated_time" content="2019-04-28T05:39:00.518Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="VS2019 实用操作">
-<meta name="twitter:description" content="本文列出了在编写程序过程中的几个非常实用的操作方式，通过这些操作方式，可以在一定程度上减少重复操作、提高编码效率、改善编程体验。 列模式操作 列操作是一项很常用且实用的功能，可以一次性修改不同的行。 在 VS2010 中已经存在该操作方式，下面表格列出 VStudio 及另外几个常用编辑器的操作方式。    编辑环境 操作方式   VStudio 按着 Alt 键，同时使用鼠标左键进行列操作  V">
-<meta name="twitter:image" content="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-02/Code-Snippets.png">
+<meta name="twitter:title" content="VS2019 更新MSDN并创建快捷方式">
+<meta name="twitter:description" content="本文主要记录了 VS2019 中帮助查看器(Help Viewer)相关的内容，如何安装、如何启动、如何复用已有的文档、如何创建快捷方式等内容，通过本文将会对该工具有一个全面的了解。 安装 Help Viewer 如果没有下图所示红色区域的两个子菜单项，说明没有安装 Help Viewer，需要重新启动安装程序进行修改。  在 VS2019 中，通过点击菜单项 Tools-&amp;gt;Get Tool">
+<meta name="twitter:image" content="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-10/HelpMenu.png">
 
 
 
@@ -114,7 +117,7 @@
 
   
   
-  <link rel="canonical" href="http://lzl678.top/2019/04/02/2019-04-02_VS2019实用操作/">
+  <link rel="canonical" href="http://lzl678.top/2019-04-10_VS2019 更新MSDN并创建快捷方式/">
 
 
 
@@ -124,7 +127,7 @@
   };
 </script>
 
-  <title>VS2019 实用操作 | Lzl678</title>
+  <title>VS2019 更新MSDN并创建快捷方式 | Lzl678</title>
   
 
 
@@ -352,7 +355,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lzl678.top/2019/04/02/2019-04-02_VS2019实用操作/">
+    <link itemprop="mainEntityOfPage" href="http://lzl678.top/2019-04-10_VS2019 更新MSDN并创建快捷方式/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Lzl678">
@@ -369,7 +372,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">VS2019 实用操作
+          <h1 class="post-title" itemprop="name headline">VS2019 更新MSDN并创建快捷方式
 
               
             
@@ -395,7 +398,7 @@
                 
               
 
-              <time title="创建时间：2019-04-02 20:53:48" itemprop="dateCreated datePublished" datetime="2019-04-02T20:53:48+08:00">2019-04-02</time>
+              <time title="创建时间：2019-04-10 21:44:55" itemprop="dateCreated datePublished" datetime="2019-04-10T21:44:55+08:00">2019-04-10</time>
             
 
             
@@ -432,8 +435,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/2019/04/02/2019-04-02_VS2019实用操作/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/02/2019-04-02_VS2019实用操作/" itemprop="commentCount"></span>
+                <a href="/2019-04-10_VS2019 更新MSDN并创建快捷方式/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019-04-10_VS2019 更新MSDN并创建快捷方式/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -441,7 +444,7 @@
 
           
           
-            <span id="/2019/04/02/2019-04-02_VS2019实用操作/" class="leancloud_visitors" data-flag-title="VS2019 实用操作">
+            <span id="/2019-04-10_VS2019 更新MSDN并创建快捷方式/" class="leancloud_visitors" data-flag-title="VS2019 更新MSDN并创建快捷方式">
               <span class="post-meta-divider">|</span>
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
@@ -472,53 +475,39 @@
       
 
       
-        <p><span id="pos_placeholder" style="width: 0px; height: 0px; visibility: hidden; margin: 0px; padding: 0px;"></span><div class="output_wrapper" id="output_wrapper_id" style="font-size: 17px; color: rgb(62, 62, 62); line-height: 1.6; word-spacing: 1px; letter-spacing: 1px; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;"><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">本文列出了在编写程序过程中的几个非常实用的操作方式，通过这些操作方式，可以在一定程度上减少重复操作、提高编码效率、改善编程体验。</p></div></p>
-<p></p><h3 id="h" style="color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px; font-weight: bold; font-size: 1.3em; border-bottom: 2px solid rgb(0, 172, 193);"><span style="font-size: inherit; line-height: inherit; margin: 0px; display: inline-block; font-weight: normal; background: rgb(0, 172, 193); color: rgb(255, 255, 255); padding: 3px 10px 0px; border-top-right-radius: 3px; border-top-left-radius: 4px; margin-right: 2px;">列模式操作</span></h3><p></p>
-<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">列操作是一项很常用且实用的功能，可以一次性修改不同的行。</p><p></p>
-<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">在 VS2010 中已经存在该操作方式，下面表格列出 VStudio 及另外几个常用编辑器的操作方式。</p><p></p>
-<p><table style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; display: table; width: 100%; text-align: left;"></table></p>
-<p><thead style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;"></thead></p>
-<p><tr style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; border-width: 1px 0px 0px; border-right-style: initial; border-bottom-style: initial; border-left-style: initial; border-right-color: initial; border-bottom-color: initial; border-left-color: initial; border-image: initial; border-top-style: solid; border-top-color: rgb(204, 204, 204); background-color: white;"></tr></p>
-<p><th style="color: inherit; line-height: inherit; margin: 0px; font-size: 1em; border: 1px solid rgb(204, 204, 204); padding: 0.5em 1em; text-align: left; font-weight: bold; background-color: rgb(240, 240, 240);">编辑环境</th></p>
-<p><th style="color: inherit; line-height: inherit; margin: 0px; font-size: 1em; border: 1px solid rgb(204, 204, 204); padding: 0.5em 1em; text-align: left; font-weight: bold; background-color: rgb(240, 240, 240);">操作方式</th><br><br></p>
-<p><tbody style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; border: 0px;"></tbody></p>
-<p><tr style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; border-width: 1px 0px 0px; border-right-style: initial; border-bottom-style: initial; border-left-style: initial; border-right-color: initial; border-bottom-color: initial; border-left-color: initial; border-image: initial; border-top-style: solid; border-top-color: rgb(204, 204, 204); background-color: white;"></tr></p>
-<p><td style="color: inherit; line-height: inherit; margin: 0px; font-size: 1em; border: 1px solid rgb(204, 204, 204); padding: 0.5em 1em; text-align: left;">VStudio</td></p>
-<p><td style="color: inherit; line-height: inherit; margin: 0px; font-size: 1em; border: 1px solid rgb(204, 204, 204); padding: 0.5em 1em; text-align: left;">按着 <strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">Alt</strong> 键，同时使用<strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">鼠标左键</strong>进行列操作</td><br></p>
-<p><tr style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; border-width: 1px 0px 0px; border-right-style: initial; border-bottom-style: initial; border-left-style: initial; border-right-color: initial; border-bottom-color: initial; border-left-color: initial; border-image: initial; border-top-style: solid; border-top-color: rgb(204, 204, 204); background-color: white;"></tr></p>
-<p><td style="color: inherit; line-height: inherit; margin: 0px; font-size: 1em; border: 1px solid rgb(204, 204, 204); padding: 0.5em 1em; text-align: left;">VS Code</td></p>
-<p><td style="color: inherit; line-height: inherit; margin: 0px; font-size: 1em; border: 1px solid rgb(204, 204, 204); padding: 0.5em 1em; text-align: left;">按着 <strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">Alt</strong> 键，同时使用<strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">鼠标左键单击</strong>需要操作的行</td><br></p>
-<p><tr style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; border-width: 1px 0px 0px; border-right-style: initial; border-bottom-style: initial; border-left-style: initial; border-right-color: initial; border-bottom-color: initial; border-left-color: initial; border-image: initial; border-top-style: solid; border-top-color: rgb(204, 204, 204); background-color: white;"></tr></p>
-<p><td style="color: inherit; line-height: inherit; margin: 0px; font-size: 1em; border: 1px solid rgb(204, 204, 204); padding: 0.5em 1em; text-align: left;">Sublime Text</td></p>
-<p><td style="color: inherit; line-height: inherit; margin: 0px; font-size: 1em; border: 1px solid rgb(204, 204, 204); padding: 0.5em 1em; text-align: left;">按着 <strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">Shift</strong> 键，同时使用<strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">鼠标右键</strong>键进行列操作</td><br></p>
-<p><tr style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; border-width: 1px 0px 0px; border-right-style: initial; border-bottom-style: initial; border-left-style: initial; border-right-color: initial; border-bottom-color: initial; border-left-color: initial; border-image: initial; border-top-style: solid; border-top-color: rgb(204, 204, 204); background-color: white;"></tr></p>
-<p><td style="color: inherit; line-height: inherit; margin: 0px; font-size: 1em; border: 1px solid rgb(204, 204, 204); padding: 0.5em 1em; text-align: left;">Notepad2</td></p>
-<p><td style="color: inherit; line-height: inherit; margin: 0px; font-size: 1em; border: 1px solid rgb(204, 204, 204); padding: 0.5em 1em; text-align: left;">按着 <strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">Alt</strong> 键，同时使用<strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">鼠标左键</strong>进行列操作</td><br><br><br></p>
-<p></p><h3 id="hcodesnippets" style="color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px; font-weight: bold; font-size: 1.3em; border-bottom: 2px solid rgb(0, 172, 193);"><span style="font-size: inherit; line-height: inherit; margin: 0px; display: inline-block; font-weight: normal; background: rgb(0, 172, 193); color: rgb(255, 255, 255); padding: 3px 10px 0px; border-top-right-radius: 3px; border-top-left-radius: 4px; margin-right: 2px;">代码片段(Code Snippets)</span></h3><p></p>
-<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">编写程序过程中会有很多重复的代码片段，如 if 语句、for 语句等，如果编辑器能够在输入 if、for 等关键词后自动填充剩余部分，无疑会在减少枯燥操作的同时节省大量时间。</p><p></p>
-<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">在 VS2010 中，没有提供 C++ 的代码片段支持，需要安装 <strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">Visual Assist X</strong> 才能使用；在 VS2019 中则提供了相关支持。可以通过 <strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">Tools-&gt;Code Snippets Manager…</strong> 查看当前环境支持的语言及代码片段所在的目录，我们可以根据需要添加新的代码片段或修改已有的。</p><p></p>
-<p><figure style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;"><img src="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-02/Code-Snippets.png" alt="" title="" style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; display: block; margin: 0px auto; max-width: 100%;"><figcaption style="line-height: inherit; margin: 0px; padding: 0px; margin-top: 10px; text-align: center; color: rgb(153, 153, 153); font-size: 0.7em;"></figcaption></figure></p>
-<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">以 if 语句为例，输入 if 后，若是 C++ 文件则 <strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">单击 Tab</strong> 即可填充剩余部分；若是 C# 文件则需要 <strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">双击 Tab</strong> 才能填充剩余部分。也可以直接使用 <strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">Edit-&gt;IntelliSense-&gt;Surrouond With… (Ctrl+K+S)</strong> 来选择需要的输入。</p><p></p>
-<p></p><h3 id="hduplicate" style="color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px; font-weight: bold; font-size: 1.3em; border-bottom: 2px solid rgb(0, 172, 193);"><span style="font-size: inherit; line-height: inherit; margin: 0px; display: inline-block; font-weight: normal; background: rgb(0, 172, 193); color: rgb(255, 255, 255); padding: 3px 10px 0px; border-top-right-radius: 3px; border-top-left-radius: 4px; margin-right: 2px;">复制(Duplicate)</span></h3><p></p>
-<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">复制(Ctrl+C)和粘贴(Ctrl+V)是两个操作，在 VS2019 中可以使用 <strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">Duplicate(Ctrl+D)</strong> 一个操作来代替。</p><p></p>
-<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">对于单行代码，把光标放在该行任意位置，对于多行，选中代码块，然后使用快捷键 <strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">Ctrl+D</strong> 即可完成复制粘贴操作。</p><p></p>
-<p></p><h3 id="hgoto" style="color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px; font-weight: bold; font-size: 1.3em; border-bottom: 2px solid rgb(0, 172, 193);"><span style="font-size: inherit; line-height: inherit; margin: 0px; display: inline-block; font-weight: normal; background: rgb(0, 172, 193); color: rgb(255, 255, 255); padding: 3px 10px 0px; border-top-right-radius: 3px; border-top-left-radius: 4px; margin-right: 2px;">转到(Go To)</span></h3><p></p>
-<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">在使用 Sublime Text 和 VS Code 的过程中，通过 <strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">Ctrl+P</strong> 弹出的输入框可以进行多项操作，如查找文件(输入文件名)、跳转到某一行(输入:行号)、查找符号(输入@符号名)等，非常方便实用。</p><p></p>
-<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">在 VS2019 中也有类似的输入框，通过 <strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">Edit-&gt;Go To</strong> 下的子菜单即可弹出，效果如下：</p><p></p>
-<p><figure style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;"><img src="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-02/GoTo.png" alt="" title="" style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; display: block; margin: 0px auto; max-width: 100%;"><figcaption style="line-height: inherit; margin: 0px; padding: 0px; margin-top: 10px; text-align: center; color: rgb(153, 153, 153); font-size: 0.7em;"></figcaption></figure></p>
-<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">在 VS2019 中快捷键 Ctrl+P 对应的操作是打印，由于该操作并不常用，可以将其移除，然后将 <strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">Edit-&gt;Go To-&gt;Go To File…</strong> 的快捷键设置为 Ctrl+P。</p><p></p>
-<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">如下图所示：1.删除之前的快捷键；2.输入新的快捷键；3.设置使之生效。</p><p></p>
-<p><figure style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;"><img src="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-02/Keyboard.png" alt="" title="" style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; display: block; margin: 0px auto; max-width: 100%;"><figcaption style="line-height: inherit; margin: 0px; padding: 0px; margin-top: 10px; text-align: center; color: rgb(153, 153, 153); font-size: 0.7em;"></figcaption></figure></p>
-<p></p><h3 id="hgotodefinition" style="color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px; font-weight: bold; font-size: 1.3em; border-bottom: 2px solid rgb(0, 172, 193);"><span style="font-size: inherit; line-height: inherit; margin: 0px; display: inline-block; font-weight: normal; background: rgb(0, 172, 193); color: rgb(255, 255, 255); padding: 3px 10px 0px; border-top-right-radius: 3px; border-top-left-radius: 4px; margin-right: 2px;">转到定义(Go To Definition)</span></h3><p></p>
-<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">当要查找一个变量、函数或类等的定义时，选中查找对象，可通过右键菜单中的菜单项 <strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">Go To Definition</strong>或 <strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">F12</strong>进行查找。</p><p></p>
-<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">在 VS2019 中，可以同过 <strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">Ctrl+Click</strong> (鼠标左键单击)进行快速查找；在 VS2010 中，使用 <strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">Productivity Power Tools</strong> 插件中的 <strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">Ctrl+Click Go To Definition</strong> 功能可以实现同样的操作。</p><p></p>
-<p></p><h3 id="hwordwrap" style="color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px; font-weight: bold; font-size: 1.3em; border-bottom: 2px solid rgb(0, 172, 193);"><span style="font-size: inherit; line-height: inherit; margin: 0px; display: inline-block; font-weight: normal; background: rgb(0, 172, 193); color: rgb(255, 255, 255); padding: 3px 10px 0px; border-top-right-radius: 3px; border-top-left-radius: 4px; margin-right: 2px;">自动换行(Word Wrap)</span></h3><p></p>
-<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">当一行代码比较长以至于无法在当前行中完全显示时，需要拖动编辑器底部的滚动条进行移动来显示被遮挡的部分。使用 <strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">自动换行</strong> 可使没有显示的部分自动转到下一行进行显示，通过菜单项 <strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">Edit-&gt;Advanced-&gt;Word Wrap (Ctrl+E+W)</strong> 来进行设置。</p><p></p>
-<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">VS2010 也具有该功能。</p><p></p>
-<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">显示效果：</p><p></p>
-<p><figure style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;"><img src="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-02/Word-Wrap.png" alt="" title="" style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; display: block; margin: 0px auto; max-width: 100%;"><figcaption style="line-height: inherit; margin: 0px; padding: 0px; margin-top: 10px; text-align: center; color: rgb(153, 153, 153); font-size: 0.7em;"></figcaption></figure></p>
-<p></p><h3 id="h-1" style="color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px; font-weight: bold; font-size: 1.3em; border-bottom: 2px solid rgb(0, 172, 193);"><span style="font-size: inherit; line-height: inherit; margin: 0px; display: inline-block; font-weight: normal; background: rgb(0, 172, 193); color: rgb(255, 255, 255); padding: 3px 10px 0px; border-top-right-radius: 3px; border-top-left-radius: 4px; margin-right: 2px;">其它操作</span></h3><p></p>
-<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">在 Edit 菜单下包含大量的其它操作，对于常用的操作如果能够熟练的使用其快捷键，也能进一步提高编程体验。具体功能菜单项及其对应的快捷键可以在 Edit 下找到，此处不再赘述。</p><p></p>
+        <p><span id="pos_placeholder" style="width: 0px; height: 0px; visibility: hidden; margin: 0px; padding: 0px;"></span><div class="output_wrapper" id="output_wrapper_id" style="font-size: 17px; color: rgb(62, 62, 62); line-height: 1.6; word-spacing: 1px; letter-spacing: 1px; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;"><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">本文主要记录了 VS2019 中帮助查看器(Help Viewer)相关的内容，如何安装、如何启动、如何复用已有的文档、如何创建快捷方式等内容，通过本文将会对该工具有一个全面的了解。</p></div></p>
+<p></p><h3 id="hhelpviewer" style="color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px; font-weight: bold; font-size: 1.3em; border-bottom: 2px solid rgb(0, 172, 193);"><span style="font-size: inherit; line-height: inherit; margin: 0px; display: inline-block; font-weight: normal; background: rgb(0, 172, 193); color: rgb(255, 255, 255); padding: 3px 10px 0px; border-top-right-radius: 3px; border-top-left-radius: 4px; margin-right: 2px;">安装 Help Viewer</span></h3><p></p>
+<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">如果没有下图所示红色区域的两个子菜单项，说明没有安装 Help Viewer，需要重新启动安装程序进行修改。</p><p></p>
+<p><figure style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;"><img src="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-10/HelpMenu.png" alt="" title="" style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; display: block; margin: 0px auto; max-width: 100%;"><figcaption style="line-height: inherit; margin: 0px; padding: 0px; margin-top: 10px; text-align: center; color: rgb(153, 153, 153); font-size: 0.7em;"></figcaption></figure></p>
+<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">在 VS2019 中，通过点击菜单项 <strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">Tools-&gt;Get Tools And Features…</strong> 可以直接打开安装程序进行修改，如下图所示选中 <strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">Help Viewer</strong>，然后点击右下角的修改，等待安装完成。</p><p></p>
+<p><figure style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;"><img src="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-10/HelpViewer.png" alt="" title="" style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; display: block; margin: 0px auto; max-width: 100%;"><figcaption style="line-height: inherit; margin: 0px; padding: 0px; margin-top: 10px; text-align: center; color: rgb(153, 153, 153); font-size: 0.7em;"></figcaption></figure></p>
+<p></p><h3 id="h" style="color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px; font-weight: bold; font-size: 1.3em; border-bottom: 2px solid rgb(0, 172, 193);"><span style="font-size: inherit; line-height: inherit; margin: 0px; display: inline-block; font-weight: normal; background: rgb(0, 172, 193); color: rgb(255, 255, 255); padding: 3px 10px 0px; border-top-right-radius: 3px; border-top-left-radius: 4px; margin-right: 2px;">修改启动方式</span></h3><p></p>
+<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">通过点击菜单项 <strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">Help-&gt;View Help</strong> 可以启动 Help Viewer，默认设置是打开浏览器显示在线的帮助文档，通过下图的设置将其修改为从 Help Viewer 直接启动。</p><p></p>
+<p><figure style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;"><img src="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-10/HelpViewer-Set.png" alt="" title="" style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; display: block; margin: 0px auto; max-width: 100%;"><figcaption style="line-height: inherit; margin: 0px; padding: 0px; margin-top: 10px; text-align: center; color: rgb(153, 153, 153); font-size: 0.7em;"></figcaption></figure></p>
+<p></p><h3 id="h-1" style="color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px; font-weight: bold; font-size: 1.3em; border-bottom: 2px solid rgb(0, 172, 193);"><span style="font-size: inherit; line-height: inherit; margin: 0px; display: inline-block; font-weight: normal; background: rgb(0, 172, 193); color: rgb(255, 255, 255); padding: 3px 10px 0px; border-top-right-radius: 3px; border-top-left-radius: 4px; margin-right: 2px;">添加文档内容</span></h3><p></p>
+<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">安装 Help Viewer 后，还需要在该软件中添加不同的技术文档进行更新才能看到文档内容。如果之前安装过 VS2015 及对应的 MSDN 文档(多达 6G 多)，可以直接利用这些文档，无需重新下载。</p><p></p>
+<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">假如之前的文档存储在 <strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">D://MSDN</strong> 目录下，具体步骤如下：</p><p></p>
+<p><ol style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; padding-left: 32px; list-style-type: decimal;"></ol></p>
+<p><li style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; margin-bottom: 0.5em;"><span style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;">将 MSDN 目录下的文件剪切到其它目录，保持该目录为空，否则步骤 2 无法修改成功；</span></li></p>
+<p><li style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; margin-bottom: 0.5em;">启动 Help Viewer，修改 <strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">Local store path</strong> 为 D://MSDN，修改成功后关闭该软件；</li></p>
+<p><li style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; margin-bottom: 0.5em;"><span style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;">将步骤 1 剪切的文件重新剪切回 D://MSDN。</span></li><br></p>
+<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">参照上面的步骤修改后，再次启动 Help Viewer，可以看到部分文档的状态显示为 Installed，说明修改成功。然后再根据个人需要添加其它没有安装的文档进行更新即可。</p><p></p>
+<p><figure style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;"><img src="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-10/HelpViewer-Doc.png" alt="" title="" style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; display: block; margin: 0px auto; max-width: 100%;"><figcaption style="line-height: inherit; margin: 0px; padding: 0px; margin-top: 10px; text-align: center; color: rgb(153, 153, 153); font-size: 0.7em;"></figcaption></figure></p>
+<p></p><h3 id="h-2" style="color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px; font-weight: bold; font-size: 1.3em; border-bottom: 2px solid rgb(0, 172, 193);"><span style="font-size: inherit; line-height: inherit; margin: 0px; display: inline-block; font-weight: normal; background: rgb(0, 172, 193); color: rgb(255, 255, 255); padding: 3px 10px 0px; border-top-right-radius: 3px; border-top-left-radius: 4px; margin-right: 2px;">创建快捷方式</span></h3><p></p>
+<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">Help Viewer 的安装目录在 <strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">C:\Program Files (x86)\Microsoft Help Viewer</strong>，如果安装了其它版本则该目录下有多个子目录。如 VS2015 对应的是 v2.2，VS2017 对应的是 v2.3 目录，<strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">VS2019 对应的也是 v2.3 目录，和 VS2017 中安装的帮助查看器是同一个版本</strong>。</p><p></p>
+<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">在使用 VS2019 过程中可以直接打开 Help Viewer 来查看相关文档，但在一些情况下我们可能使用的是其它版本，同时想直接打开安装好的帮助查看器来查阅 API 的使用方法。如果能够为帮助查看器创建桌面快捷方式就能够实现这个目的，下面介绍下设置方式。</p><p></p>
+<p></p><h4 id="hhelpviewer-1" style="color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px; font-weight: bold; font-size: 1.2em;"><span style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;">查看 Help Viewer 帮助</span></h4><p></p>
+<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">在 v2.3 目录中我们可以看到 <strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">HlpViewer.exe</strong> 程序，尝试直接双击该程序会出现如下错误信息。</p><p></p>
+<p><figure style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;"><img src="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-10/HelpViewer-param.png" alt="HelpViewer-exe" title="HelpViewer-exe" style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; display: block; margin: 0px auto; max-width: 100%;"><figcaption style="line-height: inherit; margin: 0px; padding: 0px; margin-top: 10px; text-align: center; color: rgb(153, 153, 153); font-size: 0.7em;">HelpViewer-exe</figcaption></figure></p>
+<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">根据错误信息提供的提示，在该目录下打开命令行，输入 <code style="font-size: inherit; line-height: inherit; overflow-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: rgb(233, 105, 0); background: rgb(248, 248, 248);">HlpViewer.exe /?</code> 查看该程序的参数及选项说明，如下图：</p><p></p>
+<p><figure style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;"><img src="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-10/HelpViewer-help.png" alt="" title="" style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; display: block; margin: 0px auto; max-width: 100%;"><figcaption style="line-height: inherit; margin: 0px; padding: 0px; margin-top: 10px; text-align: center; color: rgb(153, 153, 153); font-size: 0.7em;"></figcaption></figure></p>
+<p></p><h4 id="hhelpviewer-2" style="color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px; font-weight: bold; font-size: 1.2em;"><span style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;">创建 Help Viewer 快捷方式</span></h4><p></p>
+<p><ol style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; padding-left: 32px; list-style-type: decimal;"></ol></p>
+<p><li style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; margin-bottom: 0.5em;">在 v2.3 目录下选中 <strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">HlpViewer.exe</strong></li></p>
+<p><li style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; margin-bottom: 0.5em;">通过点击右键，在弹出的菜单中点击 <strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">发送到-&gt;桌面快捷方式</strong></li></p>
+<p><li style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; margin-bottom: 0.5em;"><span style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;">根据之前的帮助来设置 HlpViewer 快捷方式的属性，如下图所示（VS2019 的版本号是 16，但是安装的帮助查看器与 VS2017 的是一个版本，所以输入的命令参数使用的是 VS2017 的版本号）。</span></li><br></p>
+<p><figure style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;"><img src="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-10/HelpViewer-shortcut.png" alt="" title="" style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; display: block; margin: 0px auto; max-width: 100%;"><figcaption style="line-height: inherit; margin: 0px; padding: 0px; margin-top: 10px; text-align: center; color: rgb(153, 153, 153); font-size: 0.7em;"></figcaption></figure></p>
+<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">根据上面的步骤设置完毕，就可以直接双击桌面上的快捷方式来打开 Help Viewer 查阅安装的文档。</p><p></p>
 <p></p><p style="font-size: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px; color: #FFFFFF; background-color: #13acc1; text-align: center;"><strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">- - - End - - -</strong></p><p></p>
 
       
@@ -584,7 +573,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="http://lzl678.top/2019/04/02/2019-04-02_VS2019实用操作/" title="VS2019 实用操作">http://lzl678.top/2019/04/02/2019-04-02_VS2019实用操作/</a>
+    <a href="http://lzl678.top/2019-04-10_VS2019 更新MSDN并创建快捷方式/" title="VS2019 更新MSDN并创建快捷方式">http://lzl678.top/2019-04-10_VS2019 更新MSDN并创建快捷方式/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -610,8 +599,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/29/2019-03-31_VS2019 实用设置/" rel="next" title="VS2019 实用设置">
-                <i class="fa fa-chevron-left"></i> VS2019 实用设置
+              <a href="/2019-04-03_VS2019 离线安装方法详解/" rel="next" title="VS2019 离线安装方法详解">
+                <i class="fa fa-chevron-left"></i> VS2019 离线安装方法详解
               </a>
             
           </div>
@@ -620,8 +609,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/04/03/2019-04-03_VS2019 离线安装方法详解/" rel="prev" title="VS2019 离线安装方法详解">
-                VS2019 离线安装方法详解 <i class="fa fa-chevron-right"></i>
+              <a href="/2019-04-25_将WTL应用向导添加到VS2019/" rel="prev" title="将WTL应用向导添加到VS2019">
+                将WTL应用向导添加到VS2019 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -817,7 +806,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#h"><span class="nav-number">1.</span> <span class="nav-text">列模式操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hcodesnippets"><span class="nav-number">2.</span> <span class="nav-text">代码片段(Code Snippets)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hduplicate"><span class="nav-number">3.</span> <span class="nav-text">复制(Duplicate)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hgoto"><span class="nav-number">4.</span> <span class="nav-text">转到(Go To)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hgotodefinition"><span class="nav-number">5.</span> <span class="nav-text">转到定义(Go To Definition)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hwordwrap"><span class="nav-number">6.</span> <span class="nav-text">自动换行(Word Wrap)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#h-1"><span class="nav-number">7.</span> <span class="nav-text">其它操作</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#hhelpviewer"><span class="nav-number">1.</span> <span class="nav-text">安装 Help Viewer</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#h"><span class="nav-number">2.</span> <span class="nav-text">修改启动方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#h-1"><span class="nav-number">3.</span> <span class="nav-text">添加文档内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#h-2"><span class="nav-number">4.</span> <span class="nav-text">创建快捷方式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#hhelpviewer-1"><span class="nav-number">4.1.</span> <span class="nav-text">查看 Help Viewer 帮助</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#hhelpviewer-2"><span class="nav-number">4.2.</span> <span class="nav-text">创建 Help Viewer 快捷方式</span></a></li></ol></li></ol></div>
             
 
           </div>

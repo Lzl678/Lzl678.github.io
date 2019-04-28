@@ -90,26 +90,28 @@
 
 
 
-  <meta name="description" content="本文主要记录了 VS2019 中帮助查看器(Help Viewer)相关的内容，如何安装、如何启动、如何复用已有的文档、如何创建快捷方式等内容，通过本文将会对该工具有一个全面的了解。 安装 Help Viewer 如果没有下图所示红色区域的两个子菜单项，说明没有安装 Help Viewer，需要重新启动安装程序进行修改。  在 VS2019 中，通过点击菜单项 Tools-&amp;gt;Get Tool">
-<meta name="keywords" content="VS2019">
+  <meta name="description" content="之前向 VS2019 中添加了 WTL 应用向导，今天来分析下该应用向导安装的相关文件，最终达到拷贝相关文件到 VS2019 的相应目录中即可直接使用 WTL 应用向导的目的。 在 VS2017 之前的版本中，应用向导安装的目录是 VStudio 安装目录下的 VC\vcprojects 目录，在 VS2017 及 VS2019 中，应用向导安装的目录是 VStudio 安装目录下的 Common">
+<meta name="keywords" content="VS2019,WTL">
 <meta property="og:type" content="article">
-<meta property="og:title" content="VS2019 更新MSDN并创建快捷方式">
-<meta property="og:url" content="http://lzl678.top/2019/04/10/2019-04-10_VS2019 更新MSDN并创建快捷方式/index.html">
+<meta property="og:title" content="详解WTL应用向导">
+<meta property="og:url" content="http://lzl678.top/2019-04-26_详解WTL应用向导/index.html">
 <meta property="og:site_name" content="Lzl678">
-<meta property="og:description" content="本文主要记录了 VS2019 中帮助查看器(Help Viewer)相关的内容，如何安装、如何启动、如何复用已有的文档、如何创建快捷方式等内容，通过本文将会对该工具有一个全面的了解。 安装 Help Viewer 如果没有下图所示红色区域的两个子菜单项，说明没有安装 Help Viewer，需要重新启动安装程序进行修改。  在 VS2019 中，通过点击菜单项 Tools-&amp;gt;Get Tool">
+<meta property="og:description" content="之前向 VS2019 中添加了 WTL 应用向导，今天来分析下该应用向导安装的相关文件，最终达到拷贝相关文件到 VS2019 的相应目录中即可直接使用 WTL 应用向导的目的。 在 VS2017 之前的版本中，应用向导安装的目录是 VStudio 安装目录下的 VC\vcprojects 目录，在 VS2017 及 VS2019 中，应用向导安装的目录是 VStudio 安装目录下的 Common">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-10/HelpMenu.png">
-<meta property="og:image" content="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-10/HelpViewer.png">
-<meta property="og:image" content="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-10/HelpViewer-Set.png">
-<meta property="og:image" content="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-10/HelpViewer-Doc.png">
-<meta property="og:image" content="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-10/HelpViewer-param.png">
-<meta property="og:image" content="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-10/HelpViewer-help.png">
-<meta property="og:image" content="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-10/HelpViewer-shortcut.png">
-<meta property="og:updated_time" content="2019-04-28T05:39:00.518Z">
+<meta property="og:image" content="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-26/01-files.png">
+<meta property="og:image" content="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-26/00-vcprojects.png">
+<meta property="og:image" content="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-25/04-wtl-Wizard.png">
+<meta property="og:image" content="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-26/02-vsz.png">
+<meta property="og:image" content="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-26/02-param.png">
+<meta property="og:image" content="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-26/03-vsdir.png">
+<meta property="og:image" content="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-26/03-vsdir-2.png">
+<meta property="og:image" content="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-26/04-vsz.png">
+<meta property="og:image" content="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-26/04-vsz-2.png">
+<meta property="og:updated_time" content="2019-04-28T05:39:36.652Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="VS2019 更新MSDN并创建快捷方式">
-<meta name="twitter:description" content="本文主要记录了 VS2019 中帮助查看器(Help Viewer)相关的内容，如何安装、如何启动、如何复用已有的文档、如何创建快捷方式等内容，通过本文将会对该工具有一个全面的了解。 安装 Help Viewer 如果没有下图所示红色区域的两个子菜单项，说明没有安装 Help Viewer，需要重新启动安装程序进行修改。  在 VS2019 中，通过点击菜单项 Tools-&amp;gt;Get Tool">
-<meta name="twitter:image" content="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-10/HelpMenu.png">
+<meta name="twitter:title" content="详解WTL应用向导">
+<meta name="twitter:description" content="之前向 VS2019 中添加了 WTL 应用向导，今天来分析下该应用向导安装的相关文件，最终达到拷贝相关文件到 VS2019 的相应目录中即可直接使用 WTL 应用向导的目的。 在 VS2017 之前的版本中，应用向导安装的目录是 VStudio 安装目录下的 VC\vcprojects 目录，在 VS2017 及 VS2019 中，应用向导安装的目录是 VStudio 安装目录下的 Common">
+<meta name="twitter:image" content="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-26/01-files.png">
 
 
 
@@ -117,7 +119,7 @@
 
   
   
-  <link rel="canonical" href="http://lzl678.top/2019/04/10/2019-04-10_VS2019 更新MSDN并创建快捷方式/">
+  <link rel="canonical" href="http://lzl678.top/2019-04-26_详解WTL应用向导/">
 
 
 
@@ -127,7 +129,7 @@
   };
 </script>
 
-  <title>VS2019 更新MSDN并创建快捷方式 | Lzl678</title>
+  <title>详解WTL应用向导 | Lzl678</title>
   
 
 
@@ -355,7 +357,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lzl678.top/2019/04/10/2019-04-10_VS2019 更新MSDN并创建快捷方式/">
+    <link itemprop="mainEntityOfPage" href="http://lzl678.top/2019-04-26_详解WTL应用向导/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Lzl678">
@@ -372,7 +374,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">VS2019 更新MSDN并创建快捷方式
+          <h1 class="post-title" itemprop="name headline">详解WTL应用向导
 
               
             
@@ -398,7 +400,7 @@
                 
               
 
-              <time title="创建时间：2019-04-10 21:44:55" itemprop="dateCreated datePublished" datetime="2019-04-10T21:44:55+08:00">2019-04-10</time>
+              <time title="创建时间：2019-04-26 21:50:03" itemprop="dateCreated datePublished" datetime="2019-04-26T21:50:03+08:00">2019-04-26</time>
             
 
             
@@ -416,7 +418,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/VStudio/" itemprop="url" rel="index"><span itemprop="name">VStudio</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/WTL/" itemprop="url" rel="index"><span itemprop="name">WTL</span></a></span>
 
                 
                 
@@ -435,8 +437,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/2019/04/10/2019-04-10_VS2019 更新MSDN并创建快捷方式/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/10/2019-04-10_VS2019 更新MSDN并创建快捷方式/" itemprop="commentCount"></span>
+                <a href="/2019-04-26_详解WTL应用向导/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019-04-26_详解WTL应用向导/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -444,7 +446,7 @@
 
           
           
-            <span id="/2019/04/10/2019-04-10_VS2019 更新MSDN并创建快捷方式/" class="leancloud_visitors" data-flag-title="VS2019 更新MSDN并创建快捷方式">
+            <span id="/2019-04-26_详解WTL应用向导/" class="leancloud_visitors" data-flag-title="详解WTL应用向导">
               <span class="post-meta-divider">|</span>
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
@@ -475,39 +477,31 @@
       
 
       
-        <p><span id="pos_placeholder" style="width: 0px; height: 0px; visibility: hidden; margin: 0px; padding: 0px;"></span><div class="output_wrapper" id="output_wrapper_id" style="font-size: 17px; color: rgb(62, 62, 62); line-height: 1.6; word-spacing: 1px; letter-spacing: 1px; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;"><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">本文主要记录了 VS2019 中帮助查看器(Help Viewer)相关的内容，如何安装、如何启动、如何复用已有的文档、如何创建快捷方式等内容，通过本文将会对该工具有一个全面的了解。</p></div></p>
-<p></p><h3 id="hhelpviewer" style="color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px; font-weight: bold; font-size: 1.3em; border-bottom: 2px solid rgb(0, 172, 193);"><span style="font-size: inherit; line-height: inherit; margin: 0px; display: inline-block; font-weight: normal; background: rgb(0, 172, 193); color: rgb(255, 255, 255); padding: 3px 10px 0px; border-top-right-radius: 3px; border-top-left-radius: 4px; margin-right: 2px;">安装 Help Viewer</span></h3><p></p>
-<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">如果没有下图所示红色区域的两个子菜单项，说明没有安装 Help Viewer，需要重新启动安装程序进行修改。</p><p></p>
-<p><figure style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;"><img src="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-10/HelpMenu.png" alt="" title="" style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; display: block; margin: 0px auto; max-width: 100%;"><figcaption style="line-height: inherit; margin: 0px; padding: 0px; margin-top: 10px; text-align: center; color: rgb(153, 153, 153); font-size: 0.7em;"></figcaption></figure></p>
-<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">在 VS2019 中，通过点击菜单项 <strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">Tools-&gt;Get Tools And Features…</strong> 可以直接打开安装程序进行修改，如下图所示选中 <strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">Help Viewer</strong>，然后点击右下角的修改，等待安装完成。</p><p></p>
-<p><figure style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;"><img src="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-10/HelpViewer.png" alt="" title="" style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; display: block; margin: 0px auto; max-width: 100%;"><figcaption style="line-height: inherit; margin: 0px; padding: 0px; margin-top: 10px; text-align: center; color: rgb(153, 153, 153); font-size: 0.7em;"></figcaption></figure></p>
-<p></p><h3 id="h" style="color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px; font-weight: bold; font-size: 1.3em; border-bottom: 2px solid rgb(0, 172, 193);"><span style="font-size: inherit; line-height: inherit; margin: 0px; display: inline-block; font-weight: normal; background: rgb(0, 172, 193); color: rgb(255, 255, 255); padding: 3px 10px 0px; border-top-right-radius: 3px; border-top-left-radius: 4px; margin-right: 2px;">修改启动方式</span></h3><p></p>
-<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">通过点击菜单项 <strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">Help-&gt;View Help</strong> 可以启动 Help Viewer，默认设置是打开浏览器显示在线的帮助文档，通过下图的设置将其修改为从 Help Viewer 直接启动。</p><p></p>
-<p><figure style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;"><img src="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-10/HelpViewer-Set.png" alt="" title="" style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; display: block; margin: 0px auto; max-width: 100%;"><figcaption style="line-height: inherit; margin: 0px; padding: 0px; margin-top: 10px; text-align: center; color: rgb(153, 153, 153); font-size: 0.7em;"></figcaption></figure></p>
-<p></p><h3 id="h-1" style="color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px; font-weight: bold; font-size: 1.3em; border-bottom: 2px solid rgb(0, 172, 193);"><span style="font-size: inherit; line-height: inherit; margin: 0px; display: inline-block; font-weight: normal; background: rgb(0, 172, 193); color: rgb(255, 255, 255); padding: 3px 10px 0px; border-top-right-radius: 3px; border-top-left-radius: 4px; margin-right: 2px;">添加文档内容</span></h3><p></p>
-<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">安装 Help Viewer 后，还需要在该软件中添加不同的技术文档进行更新才能看到文档内容。如果之前安装过 VS2015 及对应的 MSDN 文档(多达 6G 多)，可以直接利用这些文档，无需重新下载。</p><p></p>
-<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">假如之前的文档存储在 <strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">D://MSDN</strong> 目录下，具体步骤如下：</p><p></p>
-<p><ol style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; padding-left: 32px; list-style-type: decimal;"></ol></p>
-<p><li style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; margin-bottom: 0.5em;"><span style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;">将 MSDN 目录下的文件剪切到其它目录，保持该目录为空，否则步骤 2 无法修改成功；</span></li></p>
-<p><li style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; margin-bottom: 0.5em;">启动 Help Viewer，修改 <strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">Local store path</strong> 为 D://MSDN，修改成功后关闭该软件；</li></p>
-<p><li style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; margin-bottom: 0.5em;"><span style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;">将步骤 1 剪切的文件重新剪切回 D://MSDN。</span></li><br></p>
-<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">参照上面的步骤修改后，再次启动 Help Viewer，可以看到部分文档的状态显示为 Installed，说明修改成功。然后再根据个人需要添加其它没有安装的文档进行更新即可。</p><p></p>
-<p><figure style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;"><img src="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-10/HelpViewer-Doc.png" alt="" title="" style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; display: block; margin: 0px auto; max-width: 100%;"><figcaption style="line-height: inherit; margin: 0px; padding: 0px; margin-top: 10px; text-align: center; color: rgb(153, 153, 153); font-size: 0.7em;"></figcaption></figure></p>
-<p></p><h3 id="h-2" style="color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px; font-weight: bold; font-size: 1.3em; border-bottom: 2px solid rgb(0, 172, 193);"><span style="font-size: inherit; line-height: inherit; margin: 0px; display: inline-block; font-weight: normal; background: rgb(0, 172, 193); color: rgb(255, 255, 255); padding: 3px 10px 0px; border-top-right-radius: 3px; border-top-left-radius: 4px; margin-right: 2px;">创建快捷方式</span></h3><p></p>
-<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">Help Viewer 的安装目录在 <strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">C:\Program Files (x86)\Microsoft Help Viewer</strong>，如果安装了其它版本则该目录下有多个子目录。如 VS2015 对应的是 v2.2，VS2017 对应的是 v2.3 目录，<strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">VS2019 对应的也是 v2.3 目录，和 VS2017 中安装的帮助查看器是同一个版本</strong>。</p><p></p>
-<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">在使用 VS2019 过程中可以直接打开 Help Viewer 来查看相关文档，但在一些情况下我们可能使用的是其它版本，同时想直接打开安装好的帮助查看器来查阅 API 的使用方法。如果能够为帮助查看器创建桌面快捷方式就能够实现这个目的，下面介绍下设置方式。</p><p></p>
-<p></p><h4 id="hhelpviewer-1" style="color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px; font-weight: bold; font-size: 1.2em;"><span style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;">查看 Help Viewer 帮助</span></h4><p></p>
-<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">在 v2.3 目录中我们可以看到 <strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">HlpViewer.exe</strong> 程序，尝试直接双击该程序会出现如下错误信息。</p><p></p>
-<p><figure style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;"><img src="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-10/HelpViewer-param.png" alt="HelpViewer-exe" title="HelpViewer-exe" style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; display: block; margin: 0px auto; max-width: 100%;"><figcaption style="line-height: inherit; margin: 0px; padding: 0px; margin-top: 10px; text-align: center; color: rgb(153, 153, 153); font-size: 0.7em;">HelpViewer-exe</figcaption></figure></p>
-<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">根据错误信息提供的提示，在该目录下打开命令行，输入 <code style="font-size: inherit; line-height: inherit; overflow-wrap: break-word; padding: 2px 4px; border-radius: 4px; margin: 0px 2px; color: rgb(233, 105, 0); background: rgb(248, 248, 248);">HlpViewer.exe /?</code> 查看该程序的参数及选项说明，如下图：</p><p></p>
-<p><figure style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;"><img src="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-10/HelpViewer-help.png" alt="" title="" style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; display: block; margin: 0px auto; max-width: 100%;"><figcaption style="line-height: inherit; margin: 0px; padding: 0px; margin-top: 10px; text-align: center; color: rgb(153, 153, 153); font-size: 0.7em;"></figcaption></figure></p>
-<p></p><h4 id="hhelpviewer-2" style="color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px; font-weight: bold; font-size: 1.2em;"><span style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;">创建 Help Viewer 快捷方式</span></h4><p></p>
-<p><ol style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; padding-left: 32px; list-style-type: decimal;"></ol></p>
-<p><li style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; margin-bottom: 0.5em;">在 v2.3 目录下选中 <strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">HlpViewer.exe</strong></li></p>
-<p><li style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; margin-bottom: 0.5em;">通过点击右键，在弹出的菜单中点击 <strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">发送到-&gt;桌面快捷方式</strong></li></p>
-<p><li style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; margin-bottom: 0.5em;"><span style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;">根据之前的帮助来设置 HlpViewer 快捷方式的属性，如下图所示（VS2019 的版本号是 16，但是安装的帮助查看器与 VS2017 的是一个版本，所以输入的命令参数使用的是 VS2017 的版本号）。</span></li><br></p>
-<p><figure style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;"><img src="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-10/HelpViewer-shortcut.png" alt="" title="" style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; display: block; margin: 0px auto; max-width: 100%;"><figcaption style="line-height: inherit; margin: 0px; padding: 0px; margin-top: 10px; text-align: center; color: rgb(153, 153, 153); font-size: 0.7em;"></figcaption></figure></p>
-<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">根据上面的步骤设置完毕，就可以直接双击桌面上的快捷方式来打开 Help Viewer 查阅安装的文档。</p><p></p>
+        <p><span id="pos_placeholder" style="width: 0px; height: 0px; visibility: hidden; margin: 0px; padding: 0px;"></span><div class="output_wrapper" id="output_wrapper_id" style="font-size: 17px; color: rgb(62, 62, 62); line-height: 1.6; word-spacing: 1px; letter-spacing: 1px; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;"><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">之前向 VS2019 中添加了 WTL 应用向导，今天来分析下该应用向导安装的相关文件，<strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">最终达到拷贝相关文件到 VS2019 的相应目录中即可直接使用 WTL 应用向导的目的</strong>。</p></div></p>
+<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">在 VS2017 之前的版本中，应用向导安装的目录是 VStudio 安装目录下的 VC\vcprojects 目录，在 VS2017 及 VS2019 中，应用向导安装的目录是 VStudio 安装目录下的 Common7\IDE\VC\vcprojects 目录。</p><p></p>
+<p></p><h3 id="h" style="color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px; font-weight: bold; font-size: 1.3em; border-bottom: 2px solid rgb(0, 172, 193);"><span style="font-size: inherit; line-height: inherit; margin: 0px; display: inline-block; font-weight: normal; background: rgb(0, 172, 193); color: rgb(255, 255, 255); padding: 3px 10px 0px; border-top-right-radius: 3px; border-top-left-radius: 4px; margin-right: 2px;">应用向导</span></h3><p></p>
+<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">下载 WTL 并解压，与向导有关的文件存储在 AppWizard 目录下的 Files 目录中。</p><p></p>
+<p><figure style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;"><img src="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-26/01-files.png" alt="" title="" style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; display: block; margin: 0px auto; max-width: 100%;"><figcaption style="line-height: inherit; margin: 0px; padding: 0px; margin-top: 10px; text-align: center; color: rgb(153, 153, 153); font-size: 0.7em;"></figcaption></figure></p>
+<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">通过 Setup.js 安装向导后，会将部分文件进行修改并拷贝到 VStudio 的相关目录下，如在 VS2019 拷贝到下图所示目录：</p><p></p>
+<p><figure style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;"><img src="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-26/00-vcprojects.png" alt="" title="" style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; display: block; margin: 0px auto; max-width: 100%;"><figcaption style="line-height: inherit; margin: 0px; padding: 0px; margin-top: 10px; text-align: center; color: rgb(153, 153, 153); font-size: 0.7em;"></figcaption></figure></p>
+<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">安装向导后，使用 VS2019 创建 WTL 工程时，选择 WTL 项目模板如下图。图中的图标是 WTL10AppWiz.ico 文件，后面的说明文字存储在 WTL10AppWiz.vsdir 文件中。</p><p></p>
+<p><figure style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;"><img src="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-25/04-wtl-Wizard.png" alt="" title="" style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; display: block; margin: 0px auto; max-width: 100%;"><figcaption style="line-height: inherit; margin: 0px; padding: 0px; margin-top: 10px; text-align: center; color: rgb(153, 153, 153); font-size: 0.7em;"></figcaption></figure></p>
+<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">WTL 向导显示的文字说明及各个选项对应的是存储在 HTML 文件下的 .htm 文件，点击 Finish 后会调用 Scripts 目录下的 default.js 文件中的 <strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">OnFinish(selProj, selObj)</strong> 函数，该函数根据之前在向导上的操作创建工程，并将 Templates 目录下对应的文件拷贝到工程目录下。</p><p></p>
+<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">所有的这些都是由 VStudio 的向导引擎进行控制，而相关配置存储在 WTL10AppWiz.vsz 文件中，该文件配置向导引擎、向导文件路径等信息，若该文件配置错误则将无法使用 WTL 应用向导。比对向导安装前后的文件。</p><p></p>
+<p><figure style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;"><img src="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-26/02-vsz.png" alt="" title="" style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; display: block; margin: 0px auto; max-width: 100%;"><figcaption style="line-height: inherit; margin: 0px; padding: 0px; margin-top: 10px; text-align: center; color: rgb(153, 153, 153); font-size: 0.7em;"></figcaption></figure></p>
+<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">参数分析：<br></p><figure style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;"><img src="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-26/02-param.png" alt="" title="" style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; display: block; margin: 0px auto; max-width: 100%;"><figcaption style="line-height: inherit; margin: 0px; padding: 0px; margin-top: 10px; text-align: center; color: rgb(153, 153, 153); font-size: 0.7em;"></figcaption></figure><p></p>
+<p></p><h3 id="hwtl10appwizvsdir" style="color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px; font-weight: bold; font-size: 1.3em; border-bottom: 2px solid rgb(0, 172, 193);"><span style="font-size: inherit; line-height: inherit; margin: 0px; display: inline-block; font-weight: normal; background: rgb(0, 172, 193); color: rgb(255, 255, 255); padding: 3px 10px 0px; border-top-right-radius: 3px; border-top-left-radius: 4px; margin-right: 2px;">修改 WTL10AppWiz.vsdir</span></h3><p></p>
+<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">在 vcprojects 目录下的 WTL 目录中也包含 WTL10AppWiz.vsdir 文件，主要内容如下图所示：</p><p></p>
+<p><figure style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;"><img src="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-26/03-vsdir.png" alt="" title="" style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; display: block; margin: 0px auto; max-width: 100%;"><figcaption style="line-height: inherit; margin: 0px; padding: 0px; margin-top: 10px; text-align: center; color: rgb(153, 153, 153); font-size: 0.7em;"></figcaption></figure></p>
+<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">除了含有选择项目模板时的说明文字，也指向了 WTL10AppWiz.vsz 文件的路径，将路径修改为当前路径，这样就可将 vcprojects 目录下的 WTL10AppWiz.ico、WTL10AppWiz.vsz 拷贝到 WTL 目录下，与 WTL10AppWiz.vsdir 文件存储在同一目录，效果如下图：</p><p></p>
+<p><figure style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;"><img src="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-26/03-vsdir-2.png" alt="" title="" style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; display: block; margin: 0px auto; max-width: 100%;"><figcaption style="line-height: inherit; margin: 0px; padding: 0px; margin-top: 10px; text-align: center; color: rgb(153, 153, 153); font-size: 0.7em;"></figcaption></figure></p>
+<p></p><h3 id="hwtl10appwizvsz" style="color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px; font-weight: bold; font-size: 1.3em; border-bottom: 2px solid rgb(0, 172, 193);"><span style="font-size: inherit; line-height: inherit; margin: 0px; display: inline-block; font-weight: normal; background: rgb(0, 172, 193); color: rgb(255, 255, 255); padding: 3px 10px 0px; border-top-right-radius: 3px; border-top-left-radius: 4px; margin-right: 2px;">修改 WTL10AppWiz.vsz</span></h3><p></p>
+<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">当前 WTL10AppWiz.vsz 文件中的参数 <strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">ABSOLUTE_PATH</strong> 指向的路径在其它磁盘，我们可以将其目录下的 HTML、Images、Scripts、Templates 文件夹拷贝到 WTL10AppWiz.vsz 所在的目录，使与 WTL 向导有关的文件都在一个目录。效果如下图：</p><p></p>
+<p><figure style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;"><img src="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-26/04-vsz.png" alt="" title="" style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; display: block; margin: 0px auto; max-width: 100%;"><figcaption style="line-height: inherit; margin: 0px; padding: 0px; margin-top: 10px; text-align: center; color: rgb(153, 153, 153); font-size: 0.7em;"></figcaption></figure></p>
+<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">由于每个人的安装习惯不同，会将 VS2019 安装在不同的目录，如果使用绝对路径指示向导文件所在目录则无法达到我们的目的。凡事都是相对的，有绝对路径相应的就有相对路径，只是要找到正确的参数及设置方式，下面进行说明。</p><p></p>
+<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">在使用绝对路径时，参数 <strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">WIZARD_NAME</strong> 的值不会影响应用向导的使用；在使用相对路径时，参数 <strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">WIZARD_NAME</strong> 的值与相对路径共同配合才能使用应用向导，<strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">需要设置为当前所在的目录名</strong>。设置方式如下：</p><p></p>
+<p><figure style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;"><img src="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-04-26/04-vsz-2.png" alt="" title="" style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; display: block; margin: 0px auto; max-width: 100%;"><figcaption style="line-height: inherit; margin: 0px; padding: 0px; margin-top: 10px; text-align: center; color: rgb(153, 153, 153); font-size: 0.7em;"></figcaption></figure></p>
+<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">经过以上设置，我们可以直接拷贝 vcprojects 目录下的 WTL 文件夹到其它安装了 VS2019 的电脑上，将其存放在对应的 Common7\IDE\VC\vcprojects 中就可以直接使用 WTL 应用向导。</p><p></p>
 <p></p><p style="font-size: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px; color: #FFFFFF; background-color: #13acc1; text-align: center;"><strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">- - - End - - -</strong></p><p></p>
 
       
@@ -573,7 +567,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="http://lzl678.top/2019/04/10/2019-04-10_VS2019 更新MSDN并创建快捷方式/" title="VS2019 更新MSDN并创建快捷方式">http://lzl678.top/2019/04/10/2019-04-10_VS2019 更新MSDN并创建快捷方式/</a>
+    <a href="http://lzl678.top/2019-04-26_详解WTL应用向导/" title="详解WTL应用向导">http://lzl678.top/2019-04-26_详解WTL应用向导/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -588,6 +582,8 @@
           
             <a href="/tags/VS2019/" rel="tag"># VS2019</a>
           
+            <a href="/tags/WTL/" rel="tag"># WTL</a>
+          
         </div>
       
 
@@ -599,8 +595,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/04/03/2019-04-03_VS2019 离线安装方法详解/" rel="next" title="VS2019 离线安装方法详解">
-                <i class="fa fa-chevron-left"></i> VS2019 离线安装方法详解
+              <a href="/2019-04-25_将WTL应用向导添加到VS2019/" rel="next" title="将WTL应用向导添加到VS2019">
+                <i class="fa fa-chevron-left"></i> 将WTL应用向导添加到VS2019
               </a>
             
           </div>
@@ -608,10 +604,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/04/25/2019-04-25_将WTL应用向导添加到VS2019/" rel="prev" title="将WTL应用向导添加到VS2019">
-                将WTL应用向导添加到VS2019 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -806,7 +798,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#hhelpviewer"><span class="nav-number">1.</span> <span class="nav-text">安装 Help Viewer</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#h"><span class="nav-number">2.</span> <span class="nav-text">修改启动方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#h-1"><span class="nav-number">3.</span> <span class="nav-text">添加文档内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#h-2"><span class="nav-number">4.</span> <span class="nav-text">创建快捷方式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#hhelpviewer-1"><span class="nav-number">4.1.</span> <span class="nav-text">查看 Help Viewer 帮助</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#hhelpviewer-2"><span class="nav-number">4.2.</span> <span class="nav-text">创建 Help Viewer 快捷方式</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#h"><span class="nav-number">1.</span> <span class="nav-text">应用向导</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hwtl10appwizvsdir"><span class="nav-number">2.</span> <span class="nav-text">修改 WTL10AppWiz.vsdir</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hwtl10appwizvsz"><span class="nav-number">3.</span> <span class="nav-text">修改 WTL10AppWiz.vsz</span></a></li></ol></div>
             
 
           </div>
