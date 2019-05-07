@@ -92,13 +92,24 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Lzl678">
-<meta property="og:url" content="http://lzl678.top/categories/VStudio/index.html">
+  <meta name="description" content="简述 现在还有多少人在开发基于 Windows 的桌面程序呢？这些人中又有多少人是在使用 MFC 进行桌面开发呢？ 使用 VS2010 及之后版本的 IDE 进行桌面程序开发时，如果使用 MFC 技术，则会发现有了许多以 CMFC 开头的控件，如浮动窗口、属性控件、Ribbon 工具栏、Grid 等控件，这些控件在 MFC 的基础上增加了很多更加强大的功能。除此之外还有主题设置，可以将程序设置成">
+<meta name="keywords" content="MFC,XTP">
+<meta property="og:type" content="article">
+<meta property="og:title" content="XTP 控件库简介">
+<meta property="og:url" content="http://lzl678.top/2019-05-07_XTP 控件库简介/index.html">
 <meta property="og:site_name" content="Lzl678">
+<meta property="og:description" content="简述 现在还有多少人在开发基于 Windows 的桌面程序呢？这些人中又有多少人是在使用 MFC 进行桌面开发呢？ 使用 VS2010 及之后版本的 IDE 进行桌面程序开发时，如果使用 MFC 技术，则会发现有了许多以 CMFC 开头的控件，如浮动窗口、属性控件、Ribbon 工具栏、Grid 等控件，这些控件在 MFC 的基础上增加了很多更加强大的功能。除此之外还有主题设置，可以将程序设置成">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-05-07/00-files.png">
+<meta property="og:image" content="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-05-07/01-samples.png">
+<meta property="og:image" content="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-05-07/02-source.png">
+<meta property="og:image" content="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-05-07/03-workspace.png">
+<meta property="og:image" content="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-05-07/04-utils.png">
+<meta property="og:updated_time" content="2019-05-07T14:24:14.604Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Lzl678">
+<meta name="twitter:title" content="XTP 控件库简介">
+<meta name="twitter:description" content="简述 现在还有多少人在开发基于 Windows 的桌面程序呢？这些人中又有多少人是在使用 MFC 进行桌面开发呢？ 使用 VS2010 及之后版本的 IDE 进行桌面程序开发时，如果使用 MFC 技术，则会发现有了许多以 CMFC 开头的控件，如浮动窗口、属性控件、Ribbon 工具栏、Grid 等控件，这些控件在 MFC 的基础上增加了很多更加强大的功能。除此之外还有主题设置，可以将程序设置成">
+<meta name="twitter:image" content="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-05-07/00-files.png">
 
 
 
@@ -106,7 +117,7 @@
 
   
   
-  <link rel="canonical" href="http://lzl678.top/categories/VStudio/">
+  <link rel="canonical" href="http://lzl678.top/2019-05-07_XTP 控件库简介/">
 
 
 
@@ -116,7 +127,7 @@
   };
 </script>
 
-  <title>分类: VStudio | Lzl678</title>
+  <title>XTP 控件库简介 | Lzl678</title>
   
 
 
@@ -164,7 +175,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -236,7 +247,7 @@
         
         
           
-          <li class="menu-item menu-item-categories menu-item-active">
+          <li class="menu-item menu-item-categories">
 
     
     
@@ -324,210 +335,299 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block category">
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>VStudio<small>分类</small>
-        </h1>
-      </div>
-
-      
-        
+  
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://lzl678.top/2019-05-07_XTP 控件库简介/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lzl678">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lzl678">
+    </span>
+
+    
+      <header class="post-header">
+
         
-          <a class="post-title-link" href="/2019-04-10_VS2019 更新MSDN并创建快捷方式/" itemprop="url">
-            
-              <span itemprop="name">VS2019 更新MSDN并创建快捷方式</span>
-            
-          </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">XTP 控件库简介
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-04-10T21:44:55+08:00" content="2019-04-10">
-          04-10
-        </time>
-      </div>
+              
+            
+          </h1>
+        
 
-    </header>
-  </article>
+        <div class="post-meta">
+          <span class="post-time">
 
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-05-07 22:13:19" itemprop="dateCreated datePublished" datetime="2019-05-07T22:13:19+08:00">2019-05-07</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/MFC/" itemprop="url" rel="index"><span itemprop="name">MFC</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/2019-05-07_XTP 控件库简介/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019-05-07_XTP 控件库简介/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+            <span id="/2019-05-07_XTP 控件库简介/" class="leancloud_visitors" data-flag-title="XTP 控件库简介">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读次数：</span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019-04-03_VS2019 离线安装方法详解/" itemprop="url">
-            
-              <span itemprop="name">VS2019 离线安装方法详解</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-04-03T20:13:49+08:00" content="2019-04-03">
-          04-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+      
 
       
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019-04-02_VS2019实用操作/" itemprop="url">
-            
-              <span itemprop="name">VS2019 实用操作</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-04-02T20:53:48+08:00" content="2019-04-02">
-          04-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019-03-31_VS2019 实用设置/" itemprop="url">
-            
-              <span itemprop="name">VS2019 实用设置</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-29T23:41:42+08:00" content="2019-03-29">
-          03-29
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019-03-29_VS2010主题设置及插件推荐/" itemprop="url">
-            
-              <span itemprop="name">VS2010主题设置及插件推荐</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-29T21:21:24+08:00" content="2019-03-29">
-          03-29
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019-03-28_放下VS2010，拥抱VS2019/" itemprop="url">
-            
-              <span itemprop="name">放下VS2010，拥抱VS2019</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-28T22:47:02+08:00" content="2019-03-28">
-          03-28
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+        <p><span id="pos_placeholder" style="width: 0px; height: 0px; visibility: hidden; margin: 0px; padding: 0px;"></span><div class="output_wrapper" id="output_wrapper_id" style="font-size: 17px; color: rgb(62, 62, 62); line-height: 1.6; word-spacing: 1px; letter-spacing: 1px; font-family: 'Helvetica Neue', Helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;"><h3 id="h" style="color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px; font-weight: bold; font-size: 1.3em; border-bottom: 2px solid rgb(0, 172, 193);"><span style="font-size: inherit; line-height: inherit; margin: 0px; display: inline-block; font-weight: normal; background: rgb(0, 172, 193); color: rgb(255, 255, 255); padding: 3px 10px 0px; border-top-right-radius: 3px; border-top-left-radius: 4px; margin-right: 2px;">简述</span></h3></div></p>
+<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;"><del style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-style: italic;">现在还有多少人在开发基于 Windows 的桌面程序呢？这些人中又有多少人是在使用 MFC 进行桌面开发呢？</del></p><p></p>
+<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">使用 VS2010 及之后版本的 IDE 进行桌面程序开发时，如果使用 MFC 技术，则会发现有了许多以 CMFC 开头的控件，如浮动窗口、属性控件、Ribbon 工具栏、Grid 等控件，这些控件在 MFC 的基础上增加了很多更加强大的功能。除此之外还有主题设置，可以将程序设置成 Office 相关的主题，如 Blue、Black 等，但是这些主题只针对 CMFC 开头的新控件有效，对之前的原生控件无法有效。因此需要找一个替代方案，从而使软件具有统一的主题配置，看起来也相对美观一些。</p><p></p>
+<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">以 MFC 为基础开发出来的增强控件库有多个，比较完备的是 BCG 和 XTP（Xtreme ToolkitPro）。使用这两个控件库都能解决主题配置的问题，也都包含了前面提到的控件（以 CMFC 开头的增强型控件）同等功能的控件。</p><p></p>
+<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">在下载试用后，功能上都能满足要求，只是 BCG 库的源文件都包含在同一个目录下，没有按不同的模块组织代码。而 <strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">XTP 库将其按照各个功能模块进行组织，更利于查找不同的模块进行学习</strong>。所以最终选用的控件库是 XTP，下面对该控件库包含的文件目录进行简单的介绍。</p><p></p>
+<p></p><h3 id="hxtp" style="color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px; font-weight: bold; font-size: 1.3em; border-bottom: 2px solid rgb(0, 172, 193);"><span style="font-size: inherit; line-height: inherit; margin: 0px; display: inline-block; font-weight: normal; background: rgb(0, 172, 193); color: rgb(255, 255, 255); padding: 3px 10px 0px; border-top-right-radius: 3px; border-top-left-radius: 4px; margin-right: 2px;">XTP</span></h3><p></p>
+<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">XTP 是 Xtreme ToolkitPro 的缩写，由于该控件库中的代码类名都以 CXTP 开头，所以后面以 XTP 库来代表该控件库。</p><p></p>
+<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">安装该控件库就像安装其它 Windows 程序一样，双击安装文件，然后点击下一步直到安装完成即可，此处不再赘述。安装后目录如下所示：</p><p></p>
+<p><figure style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;"><img src="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-05-07/00-files.png" alt="" title="" style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; display: block; margin: 0px auto; max-width: 100%;"><figcaption style="line-height: inherit; margin: 0px; padding: 0px; margin-top: 10px; text-align: center; color: rgb(153, 153, 153); font-size: 0.7em;"></figcaption></figure></p>
+<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">下面对各个目录进行简单的介绍：<br>Bin：将 XTP 编译为动态库时，该目录下存储编译后的 dll 库文件；<br>Lib：编译 XTP 库时，该目录下存储编译后的 lib 库文件；<br>Help：存放 XTP 的帮助文档，主要是一些 chm 文档；<br>Links：与 XTP 库相关的一些快捷链接图标；</p><p></p>
+<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">Samples：按模块划分，存储各个模块的示例程序，根据这些示例可以查看相关组件提供的功能，便于学习各个功能的具体使用方法。如下图所示：</p><p></p>
+<p><figure style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;"><img src="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-05-07/01-samples.png" alt="" title="" style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; display: block; margin: 0px auto; max-width: 100%;"><figcaption style="line-height: inherit; margin: 0px; padding: 0px; margin-top: 10px; text-align: center; color: rgb(153, 153, 153); font-size: 0.7em;"></figcaption></figure></p>
+<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">Source：按模块划分，存储各个模块的源文件，如下图所示：</p><p></p>
+<p><figure style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;"><img src="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-05-07/02-source.png" alt="" title="" style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; display: block; margin: 0px auto; max-width: 100%;"><figcaption style="line-height: inherit; margin: 0px; padding: 0px; margin-top: 10px; text-align: center; color: rgb(153, 153, 153); font-size: 0.7em;"></figcaption></figure></p>
+<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">Workspace：有三个文件夹，分别包含资源文件的解决方案文件（.sln 文件）、Samples 目录下的各个示例的解决方案文件、源码的解决方案文件。使用各个目录下的工程可以编译控件库、示例程序、资源文件，后面再介绍怎样使用 VS2019 进行编译各个工程。如下图所示：</p><p></p>
+<p><figure style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;"><img src="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-05-07/03-workspace.png" alt="" title="" style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; display: block; margin: 0px auto; max-width: 100%;"><figcaption style="line-height: inherit; margin: 0px; padding: 0px; margin-top: 10px; text-align: center; color: rgb(153, 153, 153); font-size: 0.7em;"></figcaption></figure></p>
+<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">Utils：包含多个使用程序，下图红色区域中的程序对应于 Samples\Utilities 目录下的代码示例，这几个程序也是对各个控件的综合使用，有相对较高的学习价值。</p><p></p>
+<p><figure style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px;"><img src="https://lzl678-1253937507.cos.ap-chengdu.myqcloud.com/blog/2019-05-07/04-utils.png" alt="" title="" style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; display: block; margin: 0px auto; max-width: 100%;"><figcaption style="line-height: inherit; margin: 0px; padding: 0px; margin-top: 10px; text-align: center; color: rgb(153, 153, 153); font-size: 0.7em;"></figcaption></figure></p>
+<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">Utils\AppWizard：目录下包含 XTP 的应用向导文件；</p><p></p>
+<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">Utils\Styles：目录下包含 XTP 提供的主题文件，对应于 Source\SkinFramework\Styles 目录下的各个工程；</p><p></p>
+<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">Utils\Translations：目录下包含 XTP 提供的不同语言的资源文件，对应于 Workspace\Resource 目录下的各个工程。</p><p></p>
+<p></p><h3 id="h-1" style="color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px; font-weight: bold; font-size: 1.3em; border-bottom: 2px solid rgb(0, 172, 193);"><span style="font-size: inherit; line-height: inherit; margin: 0px; display: inline-block; font-weight: normal; background: rgb(0, 172, 193); color: rgb(255, 255, 255); padding: 3px 10px 0px; border-top-right-radius: 3px; border-top-left-radius: 4px; margin-right: 2px;">小结</span></h3><p></p>
+<p></p><p style="font-size: inherit; color: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px;">以上对 XTP 安装目录下的相关文件进行了说明，后续会记录下如何编译库、主题设置、使用中文资源、各个高级控件的使用方法等相关问题，算是对这些年使用该控件库的总结吧。</p><p></p>
+<p></p><p style="font-size: inherit; line-height: inherit; padding: 0px; margin: 1.5em 0px; color: #FFFFFF; background-color: #13acc1; text-align: center;"><strong style="font-size: inherit; color: inherit; line-height: inherit; margin: 0px; padding: 0px; font-weight: bold;">- - - End - - -</strong></p><p></p>
 
       
     </div>
 
+    
+
+    
+    
+    
+
+    
+      <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center;">
+  <img id="wechat_subscriber_qcode" src="/images/wechat-qcode.jpg" alt="Lzl678 wechat" style="width: 200px; max-width: 100%;">
+  <div>欢迎扫码订阅我的微信公众号，以获得最佳阅读体验。</div>
+</div>
+
+    
+
+    
+      
+    
+    
+      <div>
+        <div id="reward-container">
+  <div></div>
+  <button id="reward-button" disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+
+    
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/WeChatpay.png" alt="Lzl678 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        
+
+
+
+
+  
+
+
+
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Lzl678</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    
+    <a href="http://lzl678.top/2019-05-07_XTP 控件库简介/" title="XTP 控件库简介">http://lzl678.top/2019-05-07_XTP 控件库简介/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/MFC/" rel="tag"># MFC</a>
+          
+            <a href="/tags/XTP/" rel="tag"># XTP</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019-04-26_详解WTL应用向导/" rel="next" title="详解WTL应用向导">
+                <i class="fa fa-chevron-left"></i> 详解WTL应用向导
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+
+  
+
+
 
         </div>
         
@@ -547,8 +647,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -680,6 +789,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#h"><span class="nav-number">1.</span> <span class="nav-text">简述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hxtp"><span class="nav-number">2.</span> <span class="nav-text">XTP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#h-1"><span class="nav-number">3.</span> <span class="nav-text">小结</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -839,6 +965,10 @@
 
 
   
+  <script src="/js/scrollspy.js?v=7.1.0"></script>
+<script src="/js/post-details.js?v=7.1.0"></script>
+
+
 
   
 
@@ -884,6 +1014,8 @@
 
 
 
+
+  
 
 
   
