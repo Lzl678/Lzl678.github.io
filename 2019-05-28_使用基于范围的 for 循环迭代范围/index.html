@@ -100,7 +100,7 @@
 <meta property="og:site_name" content="Lzl678">
 <meta property="og:description" content="特别声明：本文翻译自 Modern C++ Programming Cookbook 一书中的“Learning Modern Core Language Features”章节中的“Using range-based for loops to iterate on a range”小节。翻译此文纯粹作为学习之用，版权归原作者及出版社所有。  许多编程语言支持 for 循环的称之为 for ea">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-28T13:01:32.254Z">
+<meta property="og:updated_time" content="2019-05-28T13:17:49.556Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用基于范围的 for 循环迭代范围">
 <meta name="twitter:description" content="特别声明：本文翻译自 Modern C++ Programming Cookbook 一书中的“Learning Modern Core Language Features”章节中的“Using range-based for loops to iterate on a range”小节。翻译此文纯粹作为学习之用，版权归原作者及出版社所有。  许多编程语言支持 for 循环的称之为 for ea">
@@ -473,7 +473,8 @@
 <p>特别声明：<br>本文翻译自 Modern C++ Programming Cookbook 一书中的“Learning Modern Core Language Features”章节中的“Using range-based for loops to iterate on a range”小节。<br>翻译此文纯粹作为学习之用，版权归原作者及出版社所有。</p>
 </blockquote>
 <p>许多编程语言支持 for 循环的称之为 for each 的变体，即针对集合中的元素重复一组语句。在 C++11 之前 C++没有相应的核心语言支持。最接近的特性是来自标准库中的被称为 std::for_each 的通用算法，它在范围的所有元素上应用一个函数。C++11 带来了对 for each 的语言级支持，实际称之为基于范围 for 循环。新的 C++17 标准对原始语言特性提供了一些改进。</p>
-<h3 id="Getting-ready"><a href="#Getting-ready" class="headerlink" title="Getting ready"></a>Getting ready</h3><p>在 C++11 中，基于范围 for 循环的一般语法如下：<br><code>for (range_declaration : range_expression) loop_statement</code></p>
+<h3 id="Getting-ready"><a href="#Getting-ready" class="headerlink" title="Getting ready"></a>Getting ready</h3><p>在 C++11 中，基于范围 for 循环的一般语法如下：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (range_declaration : range_expression) loop_statement</span><br></pre></td></tr></table></figure>
 <p>为了举例说明基于范围的 for 循环的不同用法，我们将使用下面这些函数返回元素序列：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">std</span>::<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; getRates()</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">std</span>::<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&#123;<span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">8</span>, <span class="number">13</span>&#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">multimap</span>&lt;<span class="keyword">int</span>, <span class="keyword">bool</span>&gt; getRates2()</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">std</span>::<span class="built_in">multimap</span>&lt;<span class="keyword">int</span>, <span class="keyword">bool</span>&gt;&#123;</span><br><span class="line">        &#123;<span class="number">1</span>, <span class="literal">true</span>&#125;,</span><br><span class="line">        &#123;<span class="number">1</span>, <span class="literal">true</span>&#125;,</span><br><span class="line">        &#123;<span class="number">2</span>, <span class="literal">false</span>&#125;,</span><br><span class="line">        &#123;<span class="number">3</span>, <span class="literal">true</span>&#125;,</span><br><span class="line">        &#123;<span class="number">5</span>, <span class="literal">true</span>&#125;,</span><br><span class="line">        &#123;<span class="number">8</span>, <span class="literal">false</span>&#125;,</span><br><span class="line">        &#123;<span class="number">13</span>, <span class="literal">true</span>&#125;</span><br><span class="line">      &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="How-to-do-it…"><a href="#How-to-do-it…" class="headerlink" title="How to do it…"></a>How to do it…</h3><p>基于范围的 for 循环可以通过不同的方式使用：</p>
@@ -518,7 +519,7 @@
     
       <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center;">
   <img id="wechat_subscriber_qcode" src="/images/wechat-qcode.jpg" alt="Lzl678 wechat" style="width: 200px; max-width: 100%;">
-  <div>欢迎扫码订阅我的微信公众号，以获得最佳阅读体验。</div>
+  <div>欢迎扫码订阅我的微信公众号，阅读其它相关文章。</div>
 </div>
 
     
